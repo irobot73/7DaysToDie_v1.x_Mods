@@ -1,0 +1,23 @@
+<configs>
+
+    <append xpath="/blockplaceholders">
+
+	    <placeholder name="TreeCactusRandomHelper">
+
+            <!-- Adjust probability as desired -->
+		    <block biome="desert"       randomrotation="true" name="treeCactus06"           prob=".75"/>
+		    <block biome="desert"       randomrotation="true" name="treeCactus05"           prob=".75"/>
+		    <block biome="desert"       randomrotation="true" name="treeCactus04"           prob=".75"/>
+		    <block biome="desert"       randomrotation="true" name="treeCactus03"           prob="1.0"/>
+		    <block biome="desert"       randomrotation="true" name="treeCactus02"           prob="1.0"/>
+		    <block biome="desert"       randomrotation="true" name="treeCactus01"           prob="1.0"/>
+		    <block biome="desert"       randomrotation="true" name="treeOakSml01"           prob="0.2"/>
+		    <block biome="desert"       randomrotation="true" name="treeOakMed01"           prob="0.1"/>
+		    <block biome="desert"       randomrotation="true" name="treeDeadTree01"         prob=".25"/>
+		    <block biome="desert"       randomrotation="true" name="treeDeadTree02"         prob="0.2"/>
+
+	    </placeholder>
+
+    </append>
+
+</configs>

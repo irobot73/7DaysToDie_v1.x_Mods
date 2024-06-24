@@ -1,0 +1,17 @@
+<!-- 07-27-2023 v21.0.1 Initial version -->
+<!-- 08-26-2023 v21.2.0 Updated to respawn all Desert flora -->
+<!-- -->
+<!-- TODO: Refactor so harvesting grass 'seed' doesn't sound like a tree -->
+<!-- TODO: Integrate into an all-biome forestry re-spawn mod -->
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="I_Robot73_Regrow_Desert"/>
+	<DisplayName value="Regrow Desert (Robot Edition)" />
+	<Description value="Regrows (random) desert flora after same is broken-down and harvested."/>
+	<Author value="I_Robot73"/>
+	<Version value="21.2.0"/>
+	<Website value="https://discord.gg/DEU5wmMvSn/"/>
+</xml>
+
+<!-- https://7daystodie.fandom.com/wiki/XPath_Explained -->

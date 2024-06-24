@@ -1,0 +1,149 @@
+<configs>
+
+    <remove xpath="/blocks/block[starts-with(@name, 'treePlanted')]/property[@name='PlantGrowing.FertileLevel']"/>
+
+    <!--  Remove seeds  -->
+    <set xpath="/blocks/block[@name='treeOakSml01' or @name='treeOakMed01' or starts-with(@name,'reeDeadTree0')]/drop[@event='Destroy']/@count">0</set>
+
+    <insertBefore xpath="/blocks/block[@name='treeCactus02']">
+
+        <block name="TreeCactusRandomHelper">
+	        <property name="Extends" value="treeCactus01" />
+	        <property name="CreativeMode" value="Dev"/>
+            <property name="PlaceAsRandomRotation" value="true"/>
+	        <property name="CustomIcon" value="treeStump"/>
+	        <property name="CustomIconTint" value="FF8080"/>
+            <property name="DisplayInfo" value="Name"/>
+            <property name="DescriptionKey" value="TreeCactusRandomHelperDesc"/>
+	        <property name="ItemTypeIcon" value="other"/>
+            <property name="PlantGrowing.FertileLevel" value="0"/>
+            <property name="MultiBlockDim" value="1,1,1"/>
+            <property name="FilterTags" value="foutdoor,ftrees,fdesign"/>
+        </block>
+
+    </insertBefore>
+
+    <append xpath="/blocks">
+
+        <block name="DesertRegrowMaster">
+	        <property name="Extends" value="treeGrassMaster" param1="CustomIcon"/>
+            <property name="Class" value="ModelTree"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="IsPlant" value="true"/>
+	        <!--<property name="PlantGrowing.FertileLevel" value="0"/> -->
+	        <property name="PlantGrowing.Next" value="TreeCactusRandomHelper"/>
+            <!-- Set respawn rate below.  EX:  Given 2 Days at 60-min days, use '120' -->
+            <property name="PlantGrowing.GrowthRate" value="270"/>
+	        <property name="CustomIcon" value="treeBrownGrassDiagonal"/>
+            <property name="CustomIconTint" value="FF00FF"/>
+	        <property name="Texture" value="201,306,371,201,306,371"/>
+	        <property name="CanPlayersSpawnOn" value="false"/>
+	        <property name="ImposterExclude" value="true"/>
+	        <property name="ImposterDontBlock" value="true"/>
+	        <property name="LightOpacity" value="0"/>
+	        <property name="WaterFlow" value="permitted"/>
+	        <property name="ParticleOnDeath" value="treeGib_burnt"/>
+	        <property name="OnlySimpleRotations" value="true"/>
+	        <property name="IsDistantDecoration" value="true"/>
+	        <property name="IsTerrainDecoration" value="true"/>
+	        <property name="ActivationDistance" value="12"/>
+	        <property name="SortOrder1" value="D001"/>
+	        <property name="SortOrder2" value="0000"/>
+	        <property name="BlockTag" value="TreeTrunk"/>
+	        <property name="FilterTags" value="MC_outdoor,SC_shrubbery"/>
+        </block>
+
+        <block name="TreeCactusRandomSpawner">
+	        <property name="Extends" value="DesertRegrowMaster" />
+	        <property name="CreativeMode" value="None"/>
+	        <property name="PlantGrowing.Next" value="TreeCactusRandomHelper"/>
+	        <property name="CustomIcon" value="treeBrownGrassDiagonal"/>
+            <property name="CustomIconTint" value="FF00FF"/>
+	        <property name="Texture" value="201,306,371,201,306,371"/>
+	        <property name="SortOrder1" value="D001"/>
+	        <property name="SortOrder2" value="0001"/>
+            <!-- Adjust harvest values as desired -->
+	        <drop event="Harvest" name="resourceYuccaFibers" count="2" tag="allHarvest"/>
+	        <drop event="Destroy" count="0"/>
+	        <drop event="Fall" name="resourceYuccaFibers" count="0" prob="1" stick_chance="0"/>
+	        <property name="MaxDamage" value="100"/>
+            <property name="Model" value="@:Entities/Trees/Saguaro_Cactus_13Prefab.prefab"/>
+        </block>
+
+        <block name="treeStumpRandomSpawner">
+            <property name="Extends" value="DesertRegrowMaster" />
+	        <property name="PlantGrowing.Next" value="TreeCactusRandomHelper"/>
+            <property name="Material" value="MtreeWoodSmall"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="CustomIcon" value="treeStump"/>
+            <property name="CustomIconTint" value="FF00FF"/>
+            <property name="Texture" value="201,306,371,201,306,371"/>
+            <property name="IsPlant" value="true"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="@:Entities/Trees/Prefabs/Stump.prefab"/>
+            <property name="ModelOffset" value="0,0,0"/>
+            <property name="ImposterDontBlock" value="true"/>
+            <property name="WaterFlow" value="permitted"/>
+            <property name="Path" value="solid"/>
+            <property name="BigDecorationRadius" value="3"/>
+            <property name="IsTerrainDecoration" value="true"/>
+            <property name="StabilitySupport" value="false"/>
+            <!-- Adjust harvest values as desired -->
+            <drop event="Harvest" name="resourceWood" count="5,12" tag="oreWoodHarvest"/>
+            <drop event="Destroy" name="foodHoney" count="1" prob=".025"/>
+            <property name="SortOrder1" value="B907"/>
+            <property name="SortOrder2" value="0000"/>
+            <property name="Tags" value="wood"/>
+            <property name="FilterTags" value="MC_outdoor,SC_trees"/>
+        </block>
+
+    </append>
+
+    <!-- Cacti -->
+    <append xpath="/blocks/block[@name='treeCactus01']"> 
+	    <property name="DowngradeBlock" value="TreeCactusRandomSpawner"/>
+    </append>
+
+    <append xpath="/blocks/block[@name='treeCactus02']"> 
+	    <property name="DowngradeBlock" value="TreeCactusRandomSpawner"/>
+    </append>
+
+    <append xpath="/blocks/block[@name='treeCactus03']"> 
+	    <property name="DowngradeBlock" value="TreeCactusRandomSpawner"/>
+    </append>
+
+    <append xpath="/blocks/block[@name='treeCactus04']"> 
+	    <property name="DowngradeBlock" value="TreeCactusRandomSpawner"/>
+    </append>
+
+    <append xpath="/blocks/block[@name='treeCactus05']"> 
+	    <property name="DowngradeBlock" value="TreeCactusRandomSpawner"/>
+    </append>
+
+    <append xpath="/blocks/block[@name='treeCactus06']"> 
+	    <property name="DowngradeBlock" value="TreeCactusRandomSpawner"/>
+    </append>
+
+    <!-- Trees (those possile in Desert) -->
+
+    <append xpath="/blocks/block[@name='treeOakSml01']"> 
+	    <property name="DowngradeBlock" value="treeStumpRandomSpawner"/>
+        <property name="FallOver" value="false"/>
+    </append>
+
+    <append xpath="/blocks/block[@name='treeOakMed01']"> 
+	    <property name="DowngradeBlock" value="treeStumpRandomSpawner"/>
+        <property name="FallOver" value="false"/>
+    </append>
+
+    <append xpath="/blocks/block[@name='treeDeadTree01']"> 
+	    <property name="DowngradeBlock" value="treeStumpRandomSpawner"/>
+        <property name="FallOver" value="false"/>
+    </append>
+
+    <append xpath="/blocks/block[@name='treeDeadTree02']"> 
+	    <property name="DowngradeBlock" value="treeStumpRandomSpawner"/>
+        <property name="FallOver" value="false"/>
+    </append>
+
+</configs>

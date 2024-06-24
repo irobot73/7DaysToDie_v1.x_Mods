@@ -1,0 +1,38 @@
+<configs>
+
+    <append xpath="/blocks">
+
+        <!-- Once a nest is destroyed/harvested, switch to one of the 'grass' blocks to hide the respawn -->
+        <block name="pltBirdnestRespawn">
+            <!-- Extend should be the first entry in a block / item. -->
+            <property name="Extends" value="treeGrassMaster" param1="CustomIcon"/>
+            <property name="Class" value="PlantGrowing"/>
+            <property name="Collide" value="melee,bullet,arrow,rocket"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="treeBrownGrassDiagonal"/>
+            <property name="CustomIconTint" value="FF00FF"/>
+	        <property name="DescriptionKey" value="pltBirdnestRespawnDesc"/>
+            <property name="MaxDamage" value="100"/>
+            <!-- Set time below.  EX:  Given 2 Days at 60-min days, use '120' -->
+            <property name="PlantGrowing.GrowthRate" value="270"/>
+            <property name="PlantGrowing.Next" value="cntBirdnest"/>
+            <!-- If FertileLevel is higher than the fertile_level of the block directly below then the upgrade will not occur. -->
+	        <property name="PlantGrowing.FertileLevel" value="0"/>
+            <!-- (per 'XML.txt': A (outdoor), 7 (Resources), 3 (Grass), X (Resource)) -->
+	        <property name="SortOrder1" value="A73X"/>
+	        <property name="SortOrder2" value="0000"/>
+            <!-- Omitting 'Texture'' will default to the 'snowy' variants via parent -->
+	        <property name="Texture" value="201,306,371,201,306,371"/>
+        </block>
+
+    </append>
+
+    <!-- Add the downgrade (respawn) block to the 'Birdnest' block -->
+    <insertAfter xpath="//block[@name='cntBirdnest']/property[@name='StabilitySupport']">
+	    <property name="DowngradeBlock" value="pltBirdnestRespawn"/>
+    </insertAfter>
+
+    <!-- Make nest harvesting/destruction a BIT less noisy (REF:  'materials.xml') -->
+    <set xpath="//block[@name='cntBirdnest']/property[@name='Material']/@value">Mtallgrass</set>
+
+</configs>

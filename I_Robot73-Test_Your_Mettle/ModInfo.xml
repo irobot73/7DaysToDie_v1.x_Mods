@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+		<Name value="I_Robot_Test_Your_Mettle" />
+		<DisplayName value="Test Your Mettle (Robot Edition)" />
+		<Description value="Skips the 'Basic Survival' quests, if you want." />
+		<Author value="I_Robot73" />
+		<Version value="21.0.1" />
+		<Website value="https://discord.gg/DEU5wmMvSn/"/>
+</xml>

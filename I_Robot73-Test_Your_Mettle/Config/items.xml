@@ -1,0 +1,26 @@
+
+<configs>
+
+	<set xpath="/items/item[@name='apparelShades']/property[@name='Stacknumber']/@value">10</set>
+
+<!-- If you want to set each individually
+
+    <append xpath="/items/item[@name='apparelToughGuySunglasses']">
+        <property name="Stacknumber" value="10"/>
+    </append>
+
+    <append xpath="/items/item[@name='apparelAviatorGoggles']">
+        <property name="Stacknumber" value="10"/>
+    </append>
+
+    <append xpath="/items/item[@name='apparelSkiGoggles']">
+        <property name="Stacknumber" value="10"/>
+    </append>
+
+    <append xpath="/items/item[@name='apparelNerdGlasses']">
+        <property name="Stacknumber" value="10"/>
+    </append>
+-->
+
+</configs>
+
