@@ -4,7 +4,7 @@
 	<DisplayName value="Trader Shows POI Names (Robot Edition)" />
     <Description value="Trader will show {POI name}, where possible, when giving quests." />
 	<Author value="I_Robot73"/>
-	<Version value="21.0.1"/>
+	<Version value="v1.0"/>
 	<Website value="https://discord.gg/DEU5wmMvSn/"/>
 </xml>
 
