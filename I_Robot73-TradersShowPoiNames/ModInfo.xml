@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xml>
-	<Name value="I_Robot73_Regrow_Nests"/>
-	<DisplayName value="Regrow Nests (Robot Edition)" />
-	<Description value="Regrows (spawns) bird's nests after they are broken-down and harvested."/>
+    <Name value="I_Robot73_POI_names_in_trader_quests" />
+	<DisplayName value="Trader Shows POI Names (Robot Edition)" />
+    <Description value="Trader will show {POI name}, where possible, when giving quests." />
 	<Author value="I_Robot73"/>
 	<Version value="1.0.0"/>
 	<Website value="https://discord.gg/DEU5wmMvSn/"/>

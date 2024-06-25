@@ -4,24 +4,34 @@
 
         <!-- Once a nest is destroyed/harvested, switch to one of the 'grass' blocks to hide the respawn -->
         <block name="pltBirdnestRespawn">
-            <!-- Extend should be the first entry in a block / item. -->
-            <property name="Extends" value="treeGrassMaster" param1="CustomIcon"/>
-            <property name="Class" value="PlantGrowing"/>
+            <property name="Extends" value="treeMasterGrowing"/>
+        	<property name="CreativeMode" value="Dev"/>
+            <!-- If FertileLevel is higher than the fertile_level of the block directly below then the upgrade will not occur. -->
+	        <property name="PlantGrowing.LightLevelGrow" value="0"/>
+	        <property name="PlantGrowing.LightLevelStay" value="0"/>
+	        <property name="PlantGrowing.FertileLevel" value="0"/>
+	        <property name="PlantGrowing.Next" value="cntBirdnest"/>
+            <!-- Set time below.  EX:  Given 2 Days at 60-min days, use '120' -->
+            <property name="PlantGrowing.GrowthRate" value="270"/> <!-- If testing, use 2 or greater (but .25 seems to work) -->
             <property name="Collide" value="melee,bullet,arrow,rocket"/>
-            <property name="CreativeMode" value="Player"/>
             <property name="CustomIcon" value="treeBrownGrassDiagonal"/>
             <property name="CustomIconTint" value="FF00FF"/>
+	        <property name="Material" value="Mtallgrass"/>
+	        <property name="Shape" value="Grass"/>
+	        <property name="Mesh" value="grass"/>
+            <property name="MaxDamage" value="75"/>
 	        <property name="DescriptionKey" value="pltBirdnestRespawnDesc"/>
-            <property name="MaxDamage" value="100"/>
-            <!-- Set time below.  EX:  Given 2 Days at 60-min days, use '120' -->
-            <property name="PlantGrowing.GrowthRate" value="270"/>
-            <property name="PlantGrowing.Next" value="cntBirdnest"/>
-            <!-- If FertileLevel is higher than the fertile_level of the block directly below then the upgrade will not occur. -->
-	        <property name="PlantGrowing.FertileLevel" value="0"/>
-            <!-- (per 'XML.txt': A (outdoor), 7 (Resources), 3 (Grass), X (Resource)) -->
-	        <property name="SortOrder1" value="A73X"/>
-	        <property name="SortOrder2" value="0000"/>
-            <!-- Omitting 'Texture'' will default to the 'snowy' variants via parent -->
+	        <property name="PlaceAsRandomRotation" value="true"/>
+	        <property name="GndAlign" value="1"/>
+	        <property name="OnlySimpleRotations" value="true"/>
+	        <property name="IsTerrainDecoration" value="true"/>
+	        <property name="StabilitySupport" value="false"/>
+	        <property name="WaterFlow" value="permitted"/>
+            <drop event="Harvest" name="resourceYuccaFibers" count="1" tag="allHarvest"/>
+            <drop event="Destroy" name="resourceYuccaFibers" count="1,4"/>
+            <drop event="Fall" name="resourceYuccaFibers" count="0" prob="1" stick_chance="0"/>
+	        <property name="SortOrder1" value="B999"/>
+	        <property name="SortOrder2" value="0999"/>
 	        <property name="Texture" value="201,306,371,201,306,371"/>
         </block>
 
