@@ -1,0 +1,12 @@
+<config>
+
+    <!-- Remove Gather Resources Stone Axe Objectives -->
+    <remove xpath="/challenges/challenge[@name='gatherResourcesStoneAxe']/objective[@item='resourceWood']"/>
+    <remove xpath="/challenges/challenge[@name='gatherResourcesStoneAxe']/objective[@item='resourceRockSmall']"/>
+
+    <!-- Set Objective COMPLETE -->
+    <append xpath="/challenges/challenge[@name='gatherResourcesStoneAxe']">
+        <objective type="ChallengeComplete" challenge="redeemChallenge" count="1" is_redeemed="true"/>
+    </append>
+
+</config>
