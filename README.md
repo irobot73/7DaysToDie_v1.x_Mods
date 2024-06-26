@@ -10,9 +10,6 @@ Custom, SERVER-side mods for any 7 Days To Die v1.x server
 [I_Robot73-Regrow_Nests](https://github.com/irobot73/7DaysToDie_v1.x_Mods/tree/main/I_Robot73-Regrow_Nests)
 * Regrows destroyed a/o harvested bird's nests after a time
 
-[I_Robot73-ServerInfo](https://github.com/irobot73/7DaysToDie_v1.x_Mods/tree/main/I_Robot73-ServerInfo)
-* Extended the 'ServerJoinRulesDialog' with a Discord button
-
 [I_Robot73-Test_Your_Mettle](https://github.com/irobot73/7DaysToDie_v1.x_Mods/tree/main/I_Robot73-Test_Your_Mettle)
 * Start questing faster!  Tired of running through the 'Basic Survival' challenges?  Well, spawn in with a handful of resources & get onto the nearest trader ASAP.
 
