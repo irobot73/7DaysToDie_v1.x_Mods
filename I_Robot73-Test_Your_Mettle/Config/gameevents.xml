@@ -1,7 +1,0 @@
-<configs>
-
-    <!-- Switch [hijack] to the new 'quest' and give the player some info/details via pop-up ('Localization' file) -->
-    <set xpath="/gameevents/action_sequence[@name='game_first_spawn']//property[@name='tip_name']/@value">quest_StartingOffRight_Popup</set>
-    <set xpath="/gameevents/action_sequence[@name='game_first_spawn']//property[@name='quest']/@value">quest_StartingOffRight</set>
-
-</configs>
