@@ -1,0 +1,24 @@
+<configs>
+
+    <append xpath="/blockplaceholders">
+
+	    <placeholder name="RockSeedRandom">
+            <!-- Adjust probability as desired -->
+		    <block name="rock01" randomrotation="true" prob=".20"/>
+		    <block name="rock02" randomrotation="true" prob=".20"/>
+		    <block name="rock04" randomrotation="true" prob=".20"/>
+		    <block name="rock05" randomrotation="true" prob=".20"/>
+		    <block name="rock06" randomrotation="true" prob=".20"/>
+		    <block name="rock07" randomrotation="true" prob=".20"/>
+	    </placeholder>
+
+	    <placeholder name="ResourceRockRandom">
+            <!-- Adjust probability as desired -->
+		    <block name="resourceRock01" randomrotation="true" prob=".33"/>
+		    <block name="resourceRock02" randomrotation="true" prob=".66"/>
+		    <block name="resourceRock03" randomrotation="true" prob=".50"/>
+	    </placeholder>
+
+    </append>
+
+</configs>

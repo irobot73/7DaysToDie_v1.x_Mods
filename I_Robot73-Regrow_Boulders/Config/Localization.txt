@@ -1,0 +1,3 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english
+BoulderRandomSpawner,blocks,Block,,,"Boulder Random Spawner"
+BoulderRandomSpawnerDesc,blocks,Block,,,"After a set time, will spawn a random boulder for harvesting.  Can be picked up to terminate the respawn."

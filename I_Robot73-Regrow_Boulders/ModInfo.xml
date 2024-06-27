@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="I_Robot73_Regrow_Boulders"/>
+	<DisplayName value="Regrow Boulders (Robot Edition)" />
+	<Description value="Boulders 'regrow' after being broken-down and harvested.  Pick up, or under-mine, the rock 'seed' to terminate the growth permanently."/>
+	<Author value="I_Robot73"/>
+	<Version value="21.1.0"/>
+	<Website value="https://discord.gg/DEU5wmMvSn/"/>
+</xml>
+
+<!-- https://7daystodie.fandom.com/wiki/XPath_Explained -->

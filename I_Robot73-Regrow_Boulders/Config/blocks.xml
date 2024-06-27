@@ -1,0 +1,73 @@
+<configs>    
+	
+    <append xpath="/blocks/block[@name='resourceRock01']">
+        <property name="DowngradeBlock" value="BoulderRandomSpawner"/>
+            <property name="PassThroughDamage" value="false"/> <!-- Make sure not to break the 'seed' -->
+    </append>
+	    
+    <append xpath="/blocks/block[@name='resourceRock02']">
+        <property name="DowngradeBlock" value="BoulderRandomSpawner"/>
+            <property name="PassThroughDamage" value="false"/> <!-- Make sure not to break the 'seed' -->
+    </append>
+	    
+    <append xpath="/blocks/block[@name='resourceRock03']">
+        <property name="DowngradeBlock" value="BoulderRandomSpawner"/>
+            <property name="PassThroughDamage" value="false"/> <!-- Make sure not to break the 'seed' -->
+    </append>
+	
+	<append xpath="/blocks">
+
+        <block name="RockSeedRandom">
+	        <property name="Extends" value="rock01" />
+	        <property name="CreativeMode" value="None"/>
+	        <property name="PlaceAsRandomRotation" value="true"/>
+	        <property name="CustomIcon" value="rock06"/>
+	        <property name="CustomIconTint" value="FF8080"/>
+	        <property name="DisplayInfo" value="Name"/>
+	        <property name="ItemTypeIcon" value="other"/>
+	        <property name="PlantGrowing.FertileLevel" value="0"/>
+        </block>
+
+        <block name="ResourceRockRandom">
+	        <property name="Extends" value="resourceRock02" />
+	        <property name="CreativeMode" value="None"/>
+	        <property name="PlaceAsRandomRotation" value="true"/>
+	        <property name="CustomIcon" value="rock06"/>
+	        <property name="CustomIconTint" value="FF8080"/>
+	        <property name="DisplayInfo" value="Name"/>
+	        <property name="ItemTypeIcon" value="other"/>
+	        <property name="PlantGrowing.FertileLevel" value="0"/>
+        </block>
+
+        <block name="BoulderRandomSpawnMaster">
+            <property name="Extends" value="rock01"/>
+            <property name="Class" value="PlantGrowing"/>
+            <property name="Collide" value="melee,bullet,arrow,rocket"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="CustomIcon" value="rock01"/>
+	        <property name="CustomIconTint" value="606060"/>
+            <property name="MaxDamage" value="100"/>
+            <!-- Adjust the following time to respawn (real-world minutes of gameplay) -->
+            <!-- EG:  2 days given 60-min game days = 120, 2 days given 90-min = 180-->
+            <property name="PlantGrowing.GrowthRate" value=".2"/>
+            <property name="PlantGrowing.Next" value="resourceRock01"/>
+	        <property name="PlantGrowing.FertileLevel" value="0"/>
+            <property name="StabilitySupport" value="false"/>
+            <property name="PlaceAsRandomRotation" value="true"/>
+            <property name="CanPickup" value="true" param1="resourceRockSmall"/>
+	        <property name="CanMobsSpawnOn" value="false"/>
+            <property name="CanPlayersSpawnOn" value="false"/>
+            <property name="MultiBlockDim" value="3,2,3"/>
+        </block>
+
+        <block name="BoulderRandomSpawner">
+            <property name="Extends" value="BoulderRandomSpawnMaster"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="CustomIcon" value="rock07"/>
+            <property name="PlantGrowing.Next" value="ResourceRockRandom"/>
+            <property name="DescriptionKey" value="BoulderRandomSpawnerDesc"/>
+        </block>
+
+    </append>
+
+</configs>
