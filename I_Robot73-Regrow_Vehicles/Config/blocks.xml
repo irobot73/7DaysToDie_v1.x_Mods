@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<blocks>
+
+<!--
+    Add DOWNGRADE property and make the 'seed' undamaged when set (NO touchy unless you know what you're doing)
+-->
+
+    <!-- Cars -->
+
+    <insertAfter xpath="/blocks/block[@name='cntCar03SedanDamage2Master']/drop[@event='Destroy']">
+        <property name="DowngradeBlock" value="robotCarsRandomRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+    </insertAfter>
+
+    <insertAfter xpath="/blocks/block[@name='cntSedan01White']/drop[@event='Destroy']">
+        <property name="DowngradeBlock" value="robotCarsRandomRespawner"/>
+    </insertAfter>
+    <set xpath="/blocks/block[@name='cntSedan01White']/property[@name='PassThroughDamage']/@value">false</set>
+
+    <insertAfter xpath="/blocks/block[@name='burntSedan01']/drop[@event='Destroy']">
+        <property name="DowngradeBlock" value="robotCarsRandomRespawner"/>
+    </insertAfter>
+    <set xpath="/blocks/block[@name='burntSedan01']/property[@name='PassThroughDamage']/@value">false</set>
+
+    <insertAfter xpath="/blocks/block[@name='cntSedan3Wide01White']/drop[@event='Destroy']">
+        <property name="DowngradeBlock" value="robotCarsRandomRespawner"/>
+    </insertAfter>
+    <set xpath="/blocks/block[@name='cntSedan3Wide01White']/property[@name='PassThroughDamage']/@value">false</set>
+
+    <insertAfter xpath="/blocks/block[@name='burntSedan3Wide01']/drop[@event='Destroy']">
+        <property name="DowngradeBlock" value="robotCarsRandomRespawner"/>
+    </insertAfter>
+    <set xpath="/blocks/block[@name='burntSedan3Wide01']/property[@name='PassThroughDamage']/@value">false</set>
+
+    <insertAfter xpath="/blocks/block[@name='cntFrontCrumpledSedan01White']/drop[@event='Destroy']">
+        <property name="DowngradeBlock" value="robotCarsRandomRespawner"/>
+    </insertAfter>
+    <set xpath="/blocks/block[@name='cntFrontCrumpledSedan01White']/property[@name='PassThroughDamage']/@value">false</set>
+
+    <insertAfter xpath="/blocks/block[@name='cntMinivan01White']/drop[@event='Destroy']">
+        <property name="DowngradeBlock" value="robotCarsRandomRespawner"/>
+    </insertAfter>
+    <set xpath="/blocks/block[@name='cntMinivan01White']/property[@name='PassThroughDamage']/@value">false</set>
+
+    <insertAfter xpath="/blocks/block[@name='cntMinivan3Wide01White']/drop[@event='Destroy']">
+        <property name="DowngradeBlock" value="robotCarsRandomRespawner"/>
+    </insertAfter>
+    <set xpath="/blocks/block[@name='cntMinivan3Wide01White']/property[@name='PassThroughDamage']/@value">false</set>
+
+    <insertAfter xpath="/blocks/block[@name='cntSUV01White']/drop[@event='Destroy']">
+        <property name="DowngradeBlock" value="robotCarsRandomRespawner"/>
+    </insertAfter>
+    <set xpath="/blocks/block[@name='cntSUV01White']/property[@name='PassThroughDamage']/@value">false</set>
+
+    <insertAfter xpath="/blocks/block[@name='cntSUV3Wide01White']/drop[@event='Destroy']">
+        <property name="DowngradeBlock" value="robotCarsRandomRespawner"/>
+    </insertAfter>
+    <set xpath="/blocks/block[@name='cntSUV3Wide01White']/property[@name='PassThroughDamage']/@value">false</set>
+
+    <insertAfter xpath="/blocks/block[@name='cntPickupTruck01White']/drop[@event='Destroy']">
+        <property name="DowngradeBlock" value="robotCarsRandomRespawner"/>
+    </insertAfter>
+    <set xpath="/blocks/block[@name='cntPickupTruck01White']/property[@name='PassThroughDamage']/@value">false</set>
+
+    <insertAfter xpath="/blocks/block[@name='cntPickupTruck3Wide01White']/drop[@event='Destroy']">
+        <property name="DowngradeBlock" value="robotCarsRandomRespawner"/>
+    </insertAfter>
+    <set xpath="/blocks/block[@name='cntPickupTruck3Wide01White']/property[@name='PassThroughDamage']/@value">false</set>
+
+    <!-- SEMI -->
+
+    <insertAfter xpath="/blocks/block[@name='cntSemiTruck01White']/drop[@event='Destroy']">
+        <property name="DowngradeBlock" value="robotSemiRandomRespawner"/>
+    </insertAfter>
+    <set xpath="/blocks/block[@name='cntSemiTruck01White']/property[@name='PassThroughDamage']/@value">false</set>
+
+    <!-- POLICE -->
+
+    <insertAfter xpath="/blocks/block[@name='cntPoliceCar01PickedLockBonus' or @name='cntPoliceCar01AlarmUnlocked']/drop[@event='Destroy']">
+        <property name="DowngradeBlock" value="robotPoliceRandomRespawner"/>
+    </insertAfter>
+    <set xpath="/blocks/block[@name='cntPoliceCar01PickedLockBonus' or @name='cntPoliceCar01AlarmUnlocked']/property[@name='PassThroughDamage']/@value">false</set>
+
+    <!-- FIRE TRUCK -->
+
+    <insertAfter xpath="/blocks/block[@name='cntFireTruck01White']/drop[@event='Destroy']">
+        <property name="DowngradeBlock" value="robotFireTruckRandomRespawner"/>
+    </insertAfter>
+    <set xpath="/blocks/block[@name='cntFireTruck01White']/property[@name='PassThroughDamage']/@value">false</set>
+
+    <!-- CRUSHED CARS -->
+
+    <insertAfter xpath="/blocks/block[@name='crushedCars01White']/drop[@event='Destroy']">
+        <property name="DowngradeBlock" value="robotCrushedCarsRandomRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+    </insertAfter>
+
+    <!-- BUSES, SERVICE VEHICLES, TRACTORS, EXCAVATORS, BACKHOES -->
+
+    <insertAfter xpath="/blocks/block[@name='cntBusSchool']/drop[@event='Destroy']">
+        <property name="DowngradeBlock" value="robotBusRandomRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+    </insertAfter>
+
+    <!-- FORKLIFT -->
+
+    <insertAfter xpath="/blocks/block[@name='forkliftWhite' or @name='forklift2White']/drop[@event='Destroy']">
+        <property name="DowngradeBlock" value="robotForkLiftRandomRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+    </insertAfter>
+
+<!--
+    Add new BLOCKS
+-->
+
+    <!-- Cars -->
+
+    <insertAfter xpath="/blocks/block[@name='carsRandomHelper']">
+
+        <block name="cntAllCarsRandomHelper">
+	        <property name="Extends" value="carsRandomHelper"/>
+            <property name="CreativeMode" value="None"/>
+	        <property name="CustomIconTint" value="9caf88"/>
+	        <property name="ItemTypeIcon" value="other"/>
+	        <property name="DisplayInfo" value="Name"/>
+	        <property name="SortOrder1" value="R990"/>
+	        <property name="SortOrder2" value="9990"/>
+        </block>
+
+        <block name="robotCarsRandomRespawner">
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="robotCarsRandomRespawnerDesc"/>
+            <property name="CustomIcon" value="decoCarWheelFlat"/>
+            <property name="Class" value="PlantGrowing"/>
+            <property name="PlantGrowing.Next" value="cntAllCarsRandomHelper"/>
+            <!-- Set respawn rate below.  EX:  Given 2 Days at 60-min days, use '120' -->
+            <property name="PlantGrowing.GrowthRate" value="180"/>
+            <property name="PlantGrowing.FertileLevel" value="0"/>
+            <property name="PlantGrowing.IsRandom" value="false"/>
+            <property name="PlantGrowing.LightLevelGrow" value="8"/>
+            <property name="PlantGrowing.LightLevelStay" value="0"/>
+            <property name="PassThroughDamage" value="false"/>
+            <property name="Material" value="Mmetal"/>
+            <property name="StabilitySupport" value="false"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="@:Entities/Vehicles/Car/car_wheelPrefab.prefab"/>
+            <property name="MaxDamage" value="500"/>
+            <property name="ImposterDontBlock" value="true"/>
+            <property name="Collide" value="melee"/>
+            <property name="CanDecorateOnSlopes" value="true"/>
+            <property name="IsTerrainDecoration" value="true"/>
+            <property name="HarvestOverdamage" value="false"/>
+            <drop event="Harvest" name="resourceScrapIron" count="10,20" tag="allHarvest"/>
+            <drop event="Destroy" count="0"/>
+            <drop event="Fall" name="scrapMetalPile" count="1" prob="0.25" stick_chance="1"/>
+            <property name="FilterTags" value="MC_outdoor,SC_shrubbery"/>
+        </block>
+
+    </insertAfter>
+
+    <!-- SEMI -->
+
+    <insertAfter xpath="/blocks/block[@name='cntSemiTruck01RandomHelper']">
+
+        <block name="cntAllSemiTruckRandomHelper">
+	        <property name="Extends" value="cntSemiTruck01RandomHelper"/>
+            <property name="CreativeMode" value="None"/>
+	        <property name="CustomIconTint" value="9caf88"/>
+	        <property name="ItemTypeIcon" value="other"/>
+	        <property name="DisplayInfo" value="Name"/>
+	        <property name="SortOrder1" value="R991"/>
+	        <property name="SortOrder2" value="9991"/>
+        </block>
+
+        <block name="robotSemiRandomRespawner">
+	        <property name="Extends" value="robotCarsRandomRespawner"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="robotSemiRandomRespawnerDesc"/>
+            <property name="PlantGrowing.Next" value="cntAllSemiTruckRandomHelper"/>
+            <!-- Set respawn rate below.  EX:  Given 2 Days at 60-min days, use '120' -->
+            <property name="PlantGrowing.GrowthRate" value="240"/>
+        </block>
+
+    </insertAfter>
+
+    <!-- POLICE -->
+
+    <insertAfter xpath="/blocks/block[@name='cntPoliceCar01AirRandomHelper']">
+
+        <block name="cntAllPoliceCarRandomHelper">
+	        <property name="Extends" value="cntPoliceCar01AirRandomHelper"/>
+	        <property name="CreativeMode" value="None"/>
+	        <property name="CustomIconTint" value="9caf88"/>
+	        <property name="ItemTypeIcon" value="other"/>
+	        <property name="DisplayInfo" value="Name"/>
+	        <property name="SortOrder1" value="R992"/>
+	        <property name="SortOrder2" value="9992"/>
+        </block>
+
+        <block name="robotPoliceRandomRespawner">
+	        <property name="Extends" value="robotCarsRandomRespawner"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="robotPoliceRandomRespawnerDesc"/>
+            <property name="PlantGrowing.Next" value="cntAllPoliceCarRandomHelper"/>
+            <!-- Set respawn rate below.  EX:  Given 2 Days at 60-min days, use '120' -->
+            <property name="PlantGrowing.GrowthRate" value="360"/>
+        </block>
+
+    </insertAfter>
+
+    <!-- FIRE TRUCK -->
+
+    <insertAfter xpath="/blocks/block[@name='cntFireTruck01RandomHelper']">
+
+        <block name="robotFireTruckRandomRespawner">
+	        <property name="Extends" value="robotCarsRandomRespawner"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="robotFireTruckRandomRespawnerDesc"/>
+            <property name="PlantGrowing.Next" value="cntFireTruck01RandomHelper"/>
+            <!-- Set respawn rate below.  EX:  Given 2 Days at 60-min days, use '120' -->
+            <property name="PlantGrowing.GrowthRate" value="420"/>
+        </block>
+
+    </insertAfter>
+
+    <!-- CRUSHED CARS -->
+
+    <insertAfter xpath="/blocks/block[@name='crushedCars02RandomHelper']">
+
+        <block name="cntAllCrushedCarRandomHelper">
+	        <property name="Extends" value="crushedCars01RandomHelper"/>
+	        <property name="CreativeMode" value="None"/>
+	        <property name="CustomIconTint" value="9caf88"/>
+	        <property name="ItemTypeIcon" value="other"/>
+	        <property name="DisplayInfo" value="Name"/>
+	        <property name="SortOrder1" value="R993"/>
+	        <property name="SortOrder2" value="9993"/>
+        </block>
+
+        <block name="robotCrushedCarsRandomRespawner">
+	        <property name="Extends" value="robotCarsRandomRespawner"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="robotCrushedCarsRandomRespawnerDesc"/>
+            <property name="PlantGrowing.Next" value="cntAllCrushedCarRandomHelper"/>
+            <!-- Set respawn rate below.  EX:  Given 2 Days at 60-min days, use '120' -->
+            <property name="PlantGrowing.GrowthRate" value="120"/>
+        </block>
+
+    </insertAfter>
+
+    <!-- BUSES, SERVICE VEHICLES, TRACTORS, EXCAVATORS, BACKHOES -->
+
+    <insertAfter xpath="/blocks/block[@name='cntBusCityRandomHelper']">
+
+        <block name="cntAllBusRandomHelper">
+	        <property name="Extends" value="cntBusShuttleRandomHelper"/>
+	        <property name="CreativeMode" value="None"/>
+	        <property name="CustomIconTint" value="9caf88"/>
+	        <property name="ItemTypeIcon" value="other"/>
+	        <property name="DisplayInfo" value="Name"/>
+	        <property name="SortOrder1" value="R993"/>
+	        <property name="SortOrder2" value="9993"/>
+        </block>
+
+        <block name="robotBusRandomRespawner">
+	        <property name="Extends" value="robotCarsRandomRespawner"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="robotBusRandomRespawnerDesc"/>
+            <property name="PlantGrowing.Next" value="cntAllBusRandomHelper"/>
+            <!-- Set respawn rate below.  EX:  Given 2 Days at 60-min days, use '120' -->
+            <property name="PlantGrowing.GrowthRate" value="360"/>
+        </block>
+
+    </insertAfter>
+
+    <!-- FORKLIFT -->
+
+    <insertAfter xpath="/blocks/block[@name='cntBusCityRandomHelper']">
+
+        <block name="cntAllForkLiftsRandomHelper">
+	        <property name="Extends" value="carsRandomHelper"/>
+	        <property name="CreativeMode" value="None"/>
+	        <property name="CustomIconTint" value="9caf88"/>
+	        <property name="ItemTypeIcon" value="other"/>
+	        <property name="DisplayInfo" value="Name"/>
+	        <property name="SortOrder1" value="R994"/>
+	        <property name="SortOrder2" value="9994"/>
+        </block>
+
+        <block name="robotForkLiftRandomRespawner">
+	        <property name="Extends" value="robotCarsRandomRespawner"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="robotForkLiftRandomRespawnerDesc"/>
+            <property name="PlantGrowing.Next" value="cntAllForkLiftsRandomHelper"/>
+            <!-- Set respawn rate below.  EX:  Given 2 Days at 60-min days, use '120' -->
+            <property name="PlantGrowing.GrowthRate" value="180"/>
+        </block>
+
+    </insertAfter>
+
+</blocks>
+
+<!-- *** RANDOM HELPERS
+
+<block name="carsRandomHelper">
+<block name="carWrecksRandomHelper">
+<block name="cars3WideRandomHelper">
+<block name="cntSedan01RandomHelper">
+<block name="abandonedSUV01RandomHelper">
+<block name="abandonedSUV01DoorsRandomHelper">
+<block name="abandonedPickupTruck01RandomHelper">
+<block name="abandonedPickupTruck01DoorRandomHelper">
+<block name="cntSedan3Wide01RandomHelper">
+<block name="abandonedSUV3Wide01RandomHelper">
+<block name="abandonedSUV3Wide01DoorsRandomHelper">
+<block name="abandonedPickupTruck3Wide01RandomHelper">
+<block name="abandonedPickupTruck3Wide01DoorRandomHelper">
+<block name="cntFrontCrumpledSedan01RandomHelper">
+<block name="cntMinivan01RandomHelper">
+<block name="cntMinivan3Wide01RandomHelper">
+<block name="cntSUV01RandomHelper">
+<block name="cntSUV3Wide01RandomHelper">
+<block name="cntPickupTruck01RandomHelper">
+<block name="cntPickupTruck3Wide01RandomHelper">
+<block name="cntSemiTruck01RandomHelper">
+<block name="cntSemiTruck01ModularFrontRandomHelper">
+<block name="cntFireTruck01RandomHelper">
+<block name="crushedCars01RandomHelper">
+<block name="crushedCars02RandomHelper">
+<block name="cntCar03SedanDamage0RandomHelper">
+<block name="cntCar03SedanDamage1RandomHelper">
+<block name="cntCar03SedanDamage2RandomHelper">
+<block name="cntFrontCrumpledSedan01AirRandomHelper">
+<block name="cntSedan01AirRandomHelper">
+<block name="cntMinivan01AirRandomHelper">
+<block name="cntSUV01AirRandomHelper">
+<block name="cntPickupTruck01AirRandomHelper">
+<block name="cntSemiTruck01AirRandomHelper">
+<block name="cntPoliceCar01AirRandomHelper">
+<block name="cntFireTruck01AirRandomHelper">
+<block name="cntBusSchoolShortRandomHelper">
+<block name="cntBusSchoolRandomHelper">
+<block name="cntBusShuttleRandomHelper">
+<block name="cntBusCityRandomHelper">
+
+-->
