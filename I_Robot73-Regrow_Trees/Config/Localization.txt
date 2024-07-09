@@ -1,0 +1,11 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english
+robotTreeSeedVariantHelper,blocks,Block,,,"Bag of tree seeds"
+robotTreeSeedVariantHelperDesc,blocks,Variant,,,"With this bag on your hotbar, hold the Reload action and select a seed from the radial menu. Click or Shift-Click to select a seed to plant."
+robotAllTreesRandomHelper,blocks,Block,,,"Tree randomizer for respawn"
+robotAllTreesRandomHelperDesc,blocks,block,,,"Will randomly select a biome appropriate tree for a respawn event."
+robotTreeStumpRandomRespawner,blocks,Block,,,"Random tree respawner"
+robotTreeStumpRandomRespawnerDesc,blocks,block,,,"Will respawn a biome appropiate tree after a set time."
+robotTreeStumpWinterRandomRespawner,blocks,Block,,,"Random Winter tree respawner"
+robotTreeStumpWinterRandomRespawnerDesc,blocks,block,,,"Lower harvest result.  Will respawn a biome appropiate tree after a set time."
+robotTreeStumpBurntRandomRespawner,blocks,Block,,,"Random Burnt tree respawner"
+robotTreeStumpBurntRandomRespawnerDesc,blocks,block,,,"Lowest harvest result.  Will respawn a biome appropiate tree after a set time."

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<blockplaceholders>
+
+    <append xpath="/blockplaceholders">
+
+        <placeholder name="robotTreeSeedRandomHelper">
+			<block name="treePlantedOak1m"          prob=".5" biome="desert"/>
+			<block name="treePlantedOak1m"          prob=".5" biome="pine_forest"/>
+			<block name="treePlantedOak1m"          prob=".5" biome="snow"/>
+			<block name="treePlantedMountainPine1m" prob=".5" biome="pine_forest"/>
+			<block name="treePlantedMountainPine1m" prob=".5" biome="snow"/>
+			<block name="treePlantedWinterPine1m"   prob=".5" biome="snow"/>
+        </placeholder>
+
+        <placeholder name="robotAllCactiRandomHelper">
+			<block name="treeCactus01"  randomrotation="true"   prob=".5"/>
+			<block name="treeCactus02"  randomrotation="true"   prob=".5"/>
+			<block name="treeCactus03"  randomrotation="true"   prob=".5"/>
+			<block name="treeCactus04"  randomrotation="true"   prob=".5"/>
+			<block name="treeCactus05"  randomrotation="true"   prob=".5"/>
+			<block name="treeCactus06"  randomrotation="true"   prob=".5"/>
+        </placeholder>
+
+        <!-- The larger the tree, the less probability to should re-spawn from a cutting/stump -->
+        <placeholder name="robotAllTreesRandomHelper">
+		    <block biome="burnt_forest" randomrotation="true" name="treeDeadTree01"                 prob="1.0"/>
+		    <block biome="burnt_forest" randomrotation="true" name="treeDeadTree02"                 prob="0.8"/>
+		    <block biome="burnt_forest" randomrotation="true" name="treeBurntMaple01"               prob="1.0"/>
+		    <block biome="burnt_forest" randomrotation="true" name="driftwood"                      prob="0.4"/>
+		    <block biome="burnt_forest" randomrotation="true" name="driftwood2"                     prob="0.3"/>
+		    <block biome="burnt_forest" randomrotation="true" name="driftwood3"                     prob="0.2"/>
+		    <block biome="burnt_forest" randomrotation="true" name="treePineBurntLrg"               prob="0.8"/>
+		    <block biome="burnt_forest" randomrotation="true" name="treePineBurntMed"               prob="0.7"/>
+		    <block biome="burnt_forest" randomrotation="true" name="treePineBurntFullMed"           prob="0.5"/>
+		    <block biome="burnt_forest" randomrotation="true" name="treeBurntMaple02"               prob="0.75"/>
+		    <block biome="burnt_forest" randomrotation="true" name="treeBurntMaple03"               prob="0.5"/>
+		    <block biome="burnt_forest" randomrotation="true" name="treeMountainPineDry21m"         prob="0.2"/>
+		    <block biome="burnt_forest" randomrotation="true" name="treePlainsTree2"                prob="0.75"/>
+
+		    <block biome="wasteland"    randomrotation="true" name="treeBurntMaple01"               prob="1.0"/>
+		    <block biome="wasteland"    randomrotation="true" name="treeDeadTree01"                 prob="1.0"/>
+		    <block biome="wasteland"    randomrotation="true" name="treeDeadTree02"                 prob="1.0"/>
+		    <block biome="wasteland"    randomrotation="true" name="treePineBurntLrg"               prob="0.4"/>
+		    <block biome="wasteland"    randomrotation="true" name="treePineBurntMed"               prob="0.3"/>
+		    <block biome="wasteland"    randomrotation="true" name="treePineBurntFullMed"           prob="0.2"/>
+		    <block biome="wasteland"    randomrotation="true" name="driftwood"                      prob="0.3"/>
+		    <block biome="wasteland"    randomrotation="true" name="driftwood2"                     prob="0.2"/>
+		    <block biome="wasteland"    randomrotation="true" name="driftwood3"                     prob="0.1"/>
+		    <block biome="wasteland"    randomrotation="true" name="treeBurntMaple02"               prob="0.75"/>
+		    <block biome="wasteland"    randomrotation="true" name="treeBurntMaple03"               prob="0.5"/>
+		    <block biome="wasteland"    randomrotation="true" name="treeMountainPineDry21m"         prob="0.2"/>
+		    <block biome="wasteland"    randomrotation="true" name="treePlainsTree2"                prob="0.9"/>
+
+		    <!--
+		    <block biome="desert"       randomrotation="true" name="treeCactus06"                   prob="0.75"/>
+		    <block biome="desert"       randomrotation="true" name="treeCactus05"                   prob="0.75"/>
+		    <block biome="desert"       randomrotation="true" name="treeCactus04"                   prob="0.75"/>
+		    <block biome="desert"       randomrotation="true" name="treeCactus03"                   prob="1.0"/>
+		    <block biome="desert"       randomrotation="true" name="treeCactus02"                   prob="1.0"/>
+		    <block biome="desert"       randomrotation="true" name="treeCactus01"                   prob="1.0"/>
+		    -->
+		    <block biome="desert"       randomrotation="true" name="driftwood"                      prob="0.6"/>
+		    <block biome="desert"       randomrotation="true" name="driftwood2"                     prob="0.5"/>
+		    <block biome="desert"       randomrotation="true" name="driftwood3"                     prob="0.4"/>
+		    <block biome="desert"       randomrotation="true" name="treeOakSml01"                   prob="0.2"/>
+		    <block biome="desert"       randomrotation="true" name="treeOakMed01"                   prob="0.1"/>
+		    <block biome="desert"       randomrotation="true" name="treeDeadTree01"                 prob="0.5"/>
+		    <block biome="desert"       randomrotation="true" name="treeDeadTree02"                 prob="0.6"/>
+		    <block biome="desert"       randomrotation="true" name="treeMountainPineDry21m"         prob="0.15"/>
+		    <block biome="desert"       randomrotation="true" name="treePlainsTree2"                prob="0.5"/>
+
+		    <block biome="pine_forest"  randomrotation="true" name="treeMountainPine19m"            prob="1.0"/>
+		    <block biome="pine_forest"  randomrotation="true" name="treeOakSml01"                   prob="1.0"/>
+		    <block biome="pine_forest"  randomrotation="true" name="treeJuniper4m"                  prob="1.0"/>
+		    <block biome="pine_forest"  randomrotation="true" name="treeOakMed01"                   prob="1.0"/>
+		    <block biome="pine_forest"  randomrotation="true" name="treeMountainPine27m"            prob="1.0"/>
+		    <block biome="pine_forest"  randomrotation="true" name="treeMountainPine31m"            prob="1.0"/>
+		    <block biome="pine_forest"  randomrotation="true" name="treeFirLrg01"                   prob="1.0"/>
+		    <block biome="pine_forest"  randomrotation="true" name="treeMountainPineDry21m"         prob="0.15"/>
+		    <block biome="pine_forest"  randomrotation="true" name="treePlantedOak1m"               prob="1.0"/>
+		    <block biome="pine_forest"  randomrotation="true" name="treePlantedOak08m"              prob="0.8"/>
+		    <block biome="pine_forest"  randomrotation="true" name="treePlantedOak16m"              prob="0.7"/>
+		    <block biome="pine_forest"  randomrotation="true" name="treePlantedOak27m"              prob="0.5"/>
+		    <block biome="pine_forest"  randomrotation="true" name="treePlantedOak41m"              prob="0.3"/>
+		    <block biome="pine_forest"  randomrotation="true" name="treePlainsTree2"                prob="0.15"/>
+		    <block biome="pine_forest"  randomrotation="true" name="treePlantedMountainPine1m"      prob=".7"/>
+		    <block biome="pine_forest"  randomrotation="true" name="treePlantedMountainPine12m"     prob=".5"/>
+		    <block biome="pine_forest"  randomrotation="true" name="treePlantedMountainPine19m"     prob=".3"/>
+		    <block biome="pine_forest"  randomrotation="true" name="treePlantedMountainPine27m"     prob=".2"/>
+		    <block biome="pine_forest"  randomrotation="true" name="treePlantedMountainPine41m"     prob=".1"/>
+		    <block biome="pine_forest"  randomrotation="true" name="treeOakLrg01"                   prob="0.1"/>
+		    <block biome="pine_forest"  randomrotation="true" name="treeBurntMaple01"               prob="0.2"/>
+		    <block biome="pine_forest"  randomrotation="true" name="treeDeadTree01"                 prob="0.25"/>
+		    <block biome="pine_forest"  randomrotation="true" name="treeDeadTree02"                 prob="0.25"/>
+		    <block biome="pine_forest"  randomrotation="true" name="treeBurntMaple02"               prob="0.3"/>
+		    <block biome="pine_forest"  randomrotation="true" name="treeBurntMaple03"               prob="0.2"/>
+		    <block biome="pine_forest"  randomrotation="true" name="treePineBurntLrg"               prob="0.15"/>
+		    <block biome="pine_forest"  randomrotation="true" name="treePineBurntMed"               prob="0.1"/>
+		    <block biome="pine_forest"  randomrotation="true" name="treePineBurntFullMed"           prob="0.5"/>
+		    <block biome="pine_forest"  randomrotation="true" name="treeMountainPine12m"            prob="0.25"/>
+		    <block biome="pine_forest"  randomrotation="true" name="treeMountainPine19m"            prob="0.20"/>
+		    <block biome="pine_forest"  randomrotation="true" name="treeMountainPine27m"            prob="0.15"/>
+		    <block biome="pine_forest"  randomrotation="true" name="treeMountainPine31m"            prob="0.10"/>
+		    <block biome="pine_forest"  randomrotation="true" name="treeMountainPine41m"            prob="0.05"/>
+		    <block biome="pine_forest"  randomrotation="true" name="treeMountainPine48m"            prob="0.025"/>
+
+		    <block biome="snow"         randomrotation="true" name="treeJuniper4m"                  prob="1.0"/>
+		    <block biome="snow"         randomrotation="true" name="treeWinterEverGreen"            prob="1.0"/>
+		    <block biome="snow"         randomrotation="true" name="treeWinterPine13m"              prob="1.0"/>
+		    <block biome="snow"         randomrotation="true" name="treeWinterPine19m"              prob="1.0"/>
+		    <block biome="snow"         randomrotation="true" name="treeWinterPine28m"              prob="1.0"/>
+		    <block biome="snow"         randomrotation="true" name="treePineBurntLrg"               prob="0.15"/>
+		    <block biome="snow"         randomrotation="true" name="treePineBurntMed"               prob="0.1"/>
+		    <block biome="snow"         randomrotation="true" name="treePineBurntFullMed"           prob="0.5"/>
+		    <block biome="snow"         randomrotation="true" name="treePlantedMountainPine1m"      prob="1.0"/>
+		    <block biome="snow"         randomrotation="true" name="treePlantedMountainPine12m"     prob="1.0"/>
+		    <block biome="snow"         randomrotation="true" name="treePlantedMountainPine19m"     prob="1.0"/>
+		    <block biome="snow"         randomrotation="true" name="treePlantedMountainPine27m"     prob="1.0"/>
+		    <block biome="snow"         randomrotation="true" name="treePlantedMountainPine41m"     prob="1.0"/>
+		    <block biome="snow"         randomrotation="true" name="treeMountainPine12m"            prob="0.8"/>
+		    <block biome="snow"         randomrotation="true" name="treeMountainPine19m"            prob="0.7"/>
+		    <block biome="snow"         randomrotation="true" name="treeMountainPine27m"            prob="0.6"/>
+		    <block biome="snow"         randomrotation="true" name="treeMountainPine31m"            prob="0.5"/>
+		    <block biome="snow"         randomrotation="true" name="treeMountainPine41m"            prob="0.4"/>
+		    <block biome="snow"         randomrotation="true" name="treeMountainPine48m"            prob="0.3"/>
+		    <block biome="snow"         randomrotation="true" name="treePlantedWinterPine1m"        prob="0.8"/>
+		    <block biome="snow"         randomrotation="true" name="treePlantedWinterPine6m"        prob="0.7"/>
+		    <block biome="snow"         randomrotation="true" name="treePlantedWinterPine13m"       prob="0.5"/>
+		    <block biome="snow"         randomrotation="true" name="treePlantedWinterPine19m"       prob="0.3"/>
+		    <block biome="snow"         randomrotation="true" name="treePlantedWinterPine28m"       prob="0.1"/>
+		    <block biome="snow"         randomrotation="true" name="treeFirLrg01"                   prob="1.0"/>
+
+	    </placeholder>
+
+    </append>
+
+</blockplaceholders>
