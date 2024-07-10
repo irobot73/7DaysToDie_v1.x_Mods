@@ -31,6 +31,7 @@
             <property name="PlantGrowing.GrowthRate" value="270"/>
             <property name="PlantGrowing.FertileLevel" value="0"/>
             <property name="PlantGrowing.Next" value="robotAllTreesRandomHelper"/>
+            <property name="MaxDamage" value="500"/>
             <drop event="Harvest" name="resourceWood" count="20,30" tag="oreWoodHarvest,lumberjackHarvest"/>
             <drop event="Fall" count="0" prob="0"/>
             <property name="SortOrder1" value="R910"/>
@@ -71,6 +72,7 @@
             <property name="CustomIcon" value="treeStump"/>
             <property name="CreativeMode" value="Dev"/>
             <property name="DescriptionKey" value="robotTreeStumpBurntRandomRespawnerDesc"/>
+            <property name="MaxDamage" value="250"/>
             <drop event="Harvest" name="resourceCoal" count="5,20" tag="oreWoodHarvest,lumberjackHarvest"/>
             <drop event="Harvest" name="resourceCoal" count="5,20" tag="coalHarvest"/>
             <drop event="Destroy" name="treePlantedMountainPine1m" count="1" prob="0.25"/>
