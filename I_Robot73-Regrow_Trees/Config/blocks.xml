@@ -19,61 +19,63 @@
             <property name="IsPlant" value="true"/>
             <property name="PlaceAsRandomRotation" value="true"/>
             <property name="OnlySimpleRotations" value="true"/>
-	        <property name="Shape" value="ModelEntity"/>
-	        <property name="Model" value="#Entities/Trees?Prefabs/Stump.prefab"/>
-	        <property name="ModelOffset" value="0,0,0"/>
-	        <property name="ImposterDontBlock" value="true"/>
-	        <property name="WaterFlow" value="permitted"/>
-	        <property name="Path" value="solid"/>
-	        <property name="BigDecorationRadius" value="3"/>
-	        <property name="IsTerrainDecoration" value="true"/>
-	        <property name="StabilitySupport" value="false"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#Entities/Trees?Prefabs/Stump.prefab"/>
+            <property name="ModelOffset" value="0,0,0"/>
+            <property name="ImposterDontBlock" value="true"/>
+            <property name="WaterFlow" value="permitted"/>
+            <property name="Path" value="solid"/>
+            <property name="BigDecorationRadius" value="3"/>
+            <property name="IsTerrainDecoration" value="true"/>
+            <property name="StabilitySupport" value="false"/>
             <property name="PlantGrowing.GrowthRate" value="270"/>
-	        <property name="PlantGrowing.FertileLevel" value="0"/>
+            <property name="PlantGrowing.FertileLevel" value="0"/>
             <property name="PlantGrowing.Next" value="robotAllTreesRandomHelper"/>
-	        <drop event="Harvest" name="resourceWood" count="20,30" tag="oreWoodHarvest,lumberjackHarvest"/>
-	        <drop event="Destroy" name="foodHoney" count="1" prob=".1"/>
-	        <drop event="Destroy" name="treePlantedOak1m" count="1" prob=".75"/>
-	        <drop event="Fall" count="0" prob="0"/>
-	        <property name="SortOrder1" value="R910"/>
-	        <property name="SortOrder2" value="9910"/>
-	        <property name="Tags" value="wood,challenge_stump"/>
-	        <property name="FilterTags" value="MC_outdoor,SC_trees"/>
+            <drop event="Harvest" name="resourceWood" count="20,30" tag="oreWoodHarvest,lumberjackHarvest"/>
+            <drop event="Fall" count="0" prob="0"/>
+            <property name="SortOrder1" value="R910"/>
+            <property name="SortOrder2" value="9910"/>
+            <property name="Tags" value="wood,challenge_stump"/>
+            <property name="FilterTags" value="MC_outdoor,SC_trees"/>
         </block>
 
         <!-- 'Standard' stump -->
         <block name="robotTreeStumpRandomRespawner">
-	        <property name="Extends" value="robotTreeStumpRandomMaster"/>
-	        <property name="CustomIcon" value="treeStump"/>
-	        <property name="CreativeMode" value="Dev"/>
-	        <property name="DescriptionKey" value="robotTreeStumpRandomRespawnerDesc"/>
-	        <property name="SortOrder1" value="R911"/>
-	        <property name="SortOrder2" value="9911"/>
+            <property name="Extends" value="robotTreeStumpRandomMaster"/>
+            <property name="CustomIcon" value="treeStump"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="robotTreeStumpRandomRespawnerDesc"/>
+            <drop event="Destroy" name="treePlantedOak1m" count="1" prob=".75"/>
+            <drop event="Destroy" name="foodHoney" count="1" prob="0.1"/>
+            <property name="SortOrder1" value="R911"/>
+            <property name="SortOrder2" value="9911"/>
         </block>
 
         <!-- Winter stumps:  Smaller chance of honey and seed -->
         <block name="robotTreeStumpWinterRandomRespawner">
-	        <property name="Extends" value="robotTreeStumpRandomMaster"/>
-	        <property name="CustomIcon" value="treeStump"/>
-	        <property name="CreativeMode" value="Dev"/>
-	        <property name="DescriptionKey" value="robotTreeStumpWinterRandomRespawnerDesc"/>
-	        <drop event="Destroy" name="foodHoney" count="1" prob="0.1"/>
-	        <drop event="Destroy" name="treePlantedWinterPine1m" count="1" prob="0.5"/>
-	        <property name="SortOrder1" value="R912"/>
-	        <property name="SortOrder2" value="9912"/>
+            <property name="Extends" value="robotTreeStumpRandomMaster"/>
+            <property name="CustomIcon" value="treeStump"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="robotTreeStumpWinterRandomRespawnerDesc"/>
+            <drop event="Harvest" name="resourceWood" count="10,20" tag="oreWoodHarvest,lumberjackHarvest"/>
+            <drop event="Harvest" name="resourceSnowBall" count="2" tag="allHarvest"/>
+            <drop event="Destroy" name="foodHoney" count="1" prob="0.08"/>
+            <drop event="Destroy" name="treePlantedWinterPine1m" count="1" prob="0.5"/>
+            <property name="SortOrder1" value="R912"/>
+            <property name="SortOrder2" value="9912"/>
         </block>
 
         <!-- Burnt/Wateland stumps:  No honey, least chance of seed but does give some coal -->
         <block name="robotTreeStumpBurntRandomRespawner">
-	        <property name="Extends" value="robotTreeStumpRandomMaster"/>
-	        <property name="CustomIcon" value="treeStump"/>
-	        <property name="CreativeMode" value="Dev"/>
-	        <property name="DescriptionKey" value="robotTreeStumpBurntRandomRespawnerDesc"/>
-            <drop event="Harvest" name="resourceCoal" count="5,20" tag="oreWoodHarvest"/>
-        	<drop event="Harvest" name="resourceCoal" count="5,20" tag="coalHarvest"/>
-	        <drop event="Destroy" name="treePlantedMountainPine1m" count="1" prob="0.25"/>
-	        <property name="SortOrder1" value="R913"/>
-	        <property name="SortOrder2" value="9913"/>
+            <property name="Extends" value="robotTreeStumpRandomMaster"/>
+            <property name="CustomIcon" value="treeStump"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="robotTreeStumpBurntRandomRespawnerDesc"/>
+            <drop event="Harvest" name="resourceCoal" count="5,20" tag="oreWoodHarvest,lumberjackHarvest"/>
+            <drop event="Harvest" name="resourceCoal" count="5,20" tag="coalHarvest"/>
+            <drop event="Destroy" name="treePlantedMountainPine1m" count="1" prob="0.25"/>
+            <property name="SortOrder1" value="R913"/>
+            <property name="SortOrder2" value="9913"/>
         </block>
 
     </insertAfter>
@@ -82,30 +84,30 @@
 
         <!-- Helper that will pick a random, biome appropriate tree for a respawn [REF:  'BLOCKPLACEHOLDERS.XML'] -->
         <block name="robotAllTreesRandomHelper">
-	        <property name="Extends" value="treeOakSml01"/>
-	        <property name="CreativeMode" value="Dev"/>
-	        <property name="PlantGrowing.FertileLevel" value="0"/>
-	        <property name="DescriptionKey" value="robotAllTreesRandomHelperDesc"/>
-	        <property name="CustomIcon" value="treeOakSml01"/>
-	        <property name="CustomIconTint" value="9caf88"/>
-	        <property name="ItemTypeIcon" value="other"/>
-	        <property name="MultiBlockDim" value="1,19,1"/>
-	        <property name="SortOrder1" value="R901"/>
-	        <property name="FilterTags" value="MC_helpers,SC_helperOutdoor"/>
+            <property name="Extends" value="treeOakSml01"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="PlantGrowing.FertileLevel" value="0"/>
+            <property name="DescriptionKey" value="robotAllTreesRandomHelperDesc"/>
+            <property name="CustomIcon" value="treeOakSml01"/>
+            <property name="CustomIconTint" value="9caf88"/>
+            <property name="ItemTypeIcon" value="other"/>
+            <property name="MultiBlockDim" value="1,19,1"/>
+            <property name="SortOrder1" value="R901"/>
+            <property name="FilterTags" value="MC_helpers,SC_helperOutdoor"/>
         </block>
 
         <!-- Seed Bag (Optional 'give', instead of individual seeds [as currently set]) -->
         <block name="robotTreeSeedVariantHelper">
-	        <property name="Extends" value="treePlantedOak1m"/>
-	        <property name="CreativeMode" value="Player"/>
-	        <property name="CustomIcon" value="treePlantedOak1m"/>
-	        <property name="ItemTypeIcon" value="all_blocks"/>
-	        <property name="DescriptionKey" value="robotTreeSeedVariantHelperDesc"/>
-	        <property name="SelectAlternates" value="true"/>
-	        <property name="PlaceAltBlockValue" value="treePlantedOak1m,treePlantedMountainPine1m,treePlantedWinterPine1m"/>
-	        <property name="SortOrder1" value="R902"/>
-	        <property name="Group" value="Resources"/>
-	        <property name="FilterTags" value="MC_outdoor,SC_trees"/>
+            <property name="Extends" value="treePlantedOak1m"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="treePlantedOak1m"/>
+            <property name="ItemTypeIcon" value="all_blocks"/>
+            <property name="DescriptionKey" value="robotTreeSeedVariantHelperDesc"/>
+            <property name="SelectAlternates" value="true"/>
+            <property name="PlaceAltBlockValue" value="treePlantedOak1m,treePlantedMountainPine1m,treePlantedWinterPine1m"/>
+            <property name="SortOrder1" value="R902"/>
+            <property name="Group" value="Resources"/>
+            <property name="FilterTags" value="MC_outdoor,SC_trees"/>
         </block>
 
     </insertAfter>
@@ -127,7 +129,7 @@
     </append>
 
     <append xpath="//block[starts-with(@name, 'treeBurntMaple0')]">
-        <property name="DowngradeBlock" value="robotTreeStumpRandomRespawner"/>
+        <property name="DowngradeBlock" value="robotTreeStumpBurntRandomRespawner"/>
         <property name="FallOver" value="false"/>
     </append>
 
@@ -154,7 +156,7 @@
 
     <remove xpath="//block[starts-with(@name, 'treePineBurnt')]/drop[@event='Destroy' and starts-with(@name, 'treePlanted')]"/>
     <append xpath="//block[starts-with(@name, 'treePineBurnt')]">
-        <property name="DowngradeBlock" value="robotTreeStumpRandomRespawner"/>
+        <property name="DowngradeBlock" value="robotTreeStumpBurntRandomRespawner"/>
         <property name="FallOver" value="false"/>
     </append>
 
@@ -167,13 +169,13 @@
     <!-- WINTER -->
     <remove xpath="//block[starts-with(@name, 'treeWinterPine') or (@name='treeWinterEverGreen')]/drop[@event='Destroy' and starts-with(@name, 'treePlanted')]"/>
     <append xpath="//block[starts-with(@name, 'treeWinterPine') or (@name='treeWinterEverGreen')]">
-        <property name="DowngradeBlock" value="robotTreeStumpRandomRespawner"/>
+        <property name="DowngradeBlock" value="robotTreeStumpWinterRandomRespawner"/>
         <property name="FallOver" value="false"/>
     </append>
 
-    <remove xpath="//block[starts-with(@name, 'treePlantedWinterPine') and not (@name='treePlantedWinterPine1m')]/drop[@event='Destroy' and starts-with(@name, 'treePlanted')]"/>
-    <append xpath="//block[starts-with(@name, 'treePlantedWinterPine') and not (@name='treePlantedWinterPine1m')]">
-        <property name="DowngradeBlock" value="robotTreeStumpRandomRespawner"/>
+    <remove xpath="//block[starts-with(@name, 'treePlantedWinterPine') and not (@name='treePlantedWinterPine1m') and not (@name='treePlantedWinterPine6m')]/drop[@event='Destroy' and starts-with(@name, 'treePlanted')]"/>
+    <append xpath="//block[starts-with(@name, 'treePlantedWinterPine') and not (@name='treePlantedWinterPine1m') and not (@name='treePlantedWinterPine6m')]">
+        <property name="DowngradeBlock" value="robotTreeStumpWinterRandomRespawner"/>
         <property name="FallOver" value="false"/>
     </append>
 
@@ -293,7 +295,7 @@
 * Growth *
 
     treePlantedWinterPine1m (seed) ->  [Ignored]
-        treePlantedWinterPine6m ->
+        treePlantedWinterPine6m ->  [Ignored]
             treePlantedWinterPine13m ->
                 treePlantedWinterPine19m ->
                     treePlantedWinterPine28m (end)
