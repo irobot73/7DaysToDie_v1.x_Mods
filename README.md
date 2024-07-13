@@ -1,7 +1,7 @@
 # 7 Days To Die v1.x Mods
 Custom, SERVER-side mods for any 7 Days To Die v1.x server
 
-[I_Robot73-Regrow_All-n-One](https://github.com/irobot73/7DaysToDie_v1.x_Mods/tree/main/I_Robot73-Regrow__All-n-One)
+[I_Robot73-Regrow_All-n-One](https://github.com/irobot73/7DaysToDie_v1.x_Mods/tree/main/I_Robot73-Regrow_All-n-One)
 * Regrows, after a time:
     * Trees
     * Boulders
