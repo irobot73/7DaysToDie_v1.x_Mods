@@ -166,6 +166,12 @@
 		    <block biome="snow"         randomrotation="true" name="treeFirLrg01"                   prob="1.0"/>
 	    </placeholder>
 
+<!-- *** ATMS -->
+		<placeholder name="rbtAllATMsRandomHelper">
+			<block name="cntATMSecure" prob=".4"/>
+			<block name="cntATMInsecure" prob=".6"/>
+		</placeholder>
+
 <!-- *** VEHICLES -->
 
         <!-- *** ALL_SEDANS -->

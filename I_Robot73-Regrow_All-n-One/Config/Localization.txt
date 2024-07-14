@@ -155,4 +155,16 @@ rbtBackhoeRandomRespawnerDesc,blocks,block,,,"Will respawn a random backhoe afte
 rbtForkliftRandomRespawner,blocks,Block,,,"Random forklift respawner"
 rbtForkliftRandomRespawnerDesc,blocks,block,,,"Will respawn a random forklift after a set time."
 
+rbtAllATMsRandomHelper,blocks,Block,,,"ATM randomizer for respawn"
+rbtAllATMsRandomHelperDesc,blocks,block,,,"Will randomly select an ATM for a respawn event."
+
+rbtATMRandomRespawner,blocks,Block,,,"Random ATM respawner"
+rbtATMRandomRespawnerDesc,blocks,block,,,"Will respawn an ATM after a set time."
+
+rbtAllDrinksVendingMachineRandomRespawner,blocks,Block,,,"Random drink vending machine respawner"
+rbtAllDrinksVendingMachineRandomRespawnerDesc,blocks,block,,,"Will respawn a random drink vending after a set time."
+
+rbtAllSnacksVendingMachineRandomRespawner,blocks,Block,,,"Random snack vending machine respawner"
+rbtAllSnacksVendingMachineRandomRespawnerDesc,blocks,block,,,"Will respawn a random snack vending after a set time."
+
 
