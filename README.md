@@ -8,7 +8,9 @@ Custom, SERVER-side mods for any 7 Days To Die v1.x server
     * Cacti
     * Goldenrod, cotton, Chrysanthemum
     * Vehicles (cars, tractors, semi-truck, trailers+)
-    * Nests 
+    * Nests
+    * ATMs
+    * Vending machines
 
 [I_Robot73-Regrow_Boulders](https://github.com/irobot73/7DaysToDie_v1.x_Mods/tree/main/I_Robot73-Regrow_Boulders)
 * Regrows harvested boulders after a time.
