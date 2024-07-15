@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Sort KEY:
+
+    - Masters   001-099
+    - Variants  100-199
+    - Helpers   200-399
+    - Spawners  400-799
+    - 
+-->
+
+<blocks>
+
+    <!-- MASTER blocks -->
+    <insertAfter xpath="/blocks/block[@name='decoEntityGlassMaster']">
+
+        <!-- Air\Respawner [This master controls all the blocks that it 'Extends' from]
+                - If 'FertileLevel' is higher than the fertile_level of the block directly below then the upgrade will not occur.
+                - Set 'GrowthRate' time below.  EX:  Given 2 Days at 60-min days, use '120' [using '0.2' for testing seems to work well]
+         -->
+        <block name="rbtAirRandomMaster">
+            <property name="Extends" value="air"/>
+            <property name="Class" value="PlantGrowing"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="PlantGrowing.GrowthRate" value="0.2"/>
+            <property name="PlantGrowing.FertileLevel" value="0"/>
+        </block>
+
+        <!-- Grass\Respawner [This master controls all the blocks that it 'Extends' from]
+                - If 'FertileLevel' is higher than the fertile_level of the block directly below then the upgrade will not occur.
+                - Set 'GrowthRate' time below.  EX:  Given 2 Days at 60-min days, use '120' [using '0.2' for testing seems to work well]
+                - Set the 'Drop event=Havest|Destroy' items and probabilities to your liking.
+         -->
+        <block name="rbtTreeGrassRandomMaster">
+            <property name="Class" value="PlantGrowing"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="HarvestOverdamage" value="false"/>
+            <property name="CustomIcon" value="treeBrownGrassDiagonal"/>
+            <property name="DescriptionKey" value="rbtTreeGrassRandomMasterDesc"/>
+            <property name="Material" value="Mtallgrass"/>
+            <property name="Shape" value="Grass"/>
+            <property name="Mesh" value="grass"/>
+            <property name="Texture" value="350,368,369,370,350,368"/>
+            <property name="ImposterDontBlock" value="true"/>
+            <property name="WaterFlow" value="permitted"/>
+            <property name="Collide" value="melee"/>
+            <property name="IsTerrainDecoration" value="true"/>
+            <property name="IsDecoration" value="true"/>
+            <property name="CanDecorateOnSlopes" value="true"/>
+            <property name="StabilitySupport" value="false"/>
+            <property name="PassThroughDamage" value="false"/>
+            <property name="PlaceAsRandomRotation" value="true"/>
+            <property name="OnlySimpleRotations" value="true"/>
+            <property name="PlantGrowing.GrowthRate" value="0.2"/>
+            <property name="PlantGrowing.FertileLevel" value="0"/>
+            <property name="PlantGrowing.Next" value="rbtAllTreesRandomHelper"/>
+            <property name="CanPlayersSpawnOn" value="false"/>
+            <property name="CanMobsSpawnOn" value="false"/>
+            <property name="MaxDamage" value="100"/>
+            <drop event="Harvest" name="resourceYuccaFibers" count="2" tag="allHarvest"/>
+            <drop event="Destroy" count="0"/>
+            <drop event="Fall" name="resourceYuccaFibers" count="0" prob="1" stick_chance="0"/>
+            <property name="SortOrder1" value="R001"/>
+            <property name="SortOrder2" value="9001"/>
+        </block>
+
+        <!-- Boulder\Respawner [This master controls all the blocks that it 'Extends' from]
+                - Set 'GrowthRate' time below.  EX:  Given 2 Days at 60-min days, use '120' [using '0.2' for testing seems to work well]
+         -->
+        <block name="rbtBoulderRandomMaster">
+            <property name="Class" value="PlantGrowing"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="HarvestOverdamage" value="false"/>
+            <property name="CustomIcon" value="rock01"/>
+            <property name="DescriptionKey" value="rbtBoulderRandomMasterDesc"/>
+            <property name="Material" value="Mstone"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="Entities/OutdoorDecor/stoneAPrefab"/>
+            <property name="ImposterDontBlock" value="true"/>
+            <property name="WaterFlow" value="permitted"/>
+            <property name="Collide" value="melee,bullet,arrow,rocket"/>
+            <property name="IsTerrainDecoration" value="true"/>
+            <property name="CanDecorateOnSlopes" value="true"/>
+            <property name="StabilitySupport" value="false"/>
+            <property name="PassThroughDamage" value="false"/>
+            <property name="PlaceAsRandomRotation" value="true"/>
+            <property name="OnlySimpleRotations" value="true"/>
+            <property name="PlantGrowing.GrowthRate" value="0.2"/>
+            <property name="PlantGrowing.FertileLevel" value="0"/>
+            <property name="PlantGrowing.Next" value="rbtAllBouldersRandomHelper"/>
+            <property name="CanPlayersSpawnOn" value="false"/>
+            <property name="CanMobsSpawnOn" value="false"/>
+            <property name="MaxDamage" value="100"/>
+            <property name="CanPickup" value="true" param1="resourceRockSmall"/>
+            <drop event="Destroy" name="resourceRockSmall" count="1"/>
+            <property name="SortOrder1" value="R201"/>
+            <property name="SortOrder2" value="9201"/>
+        </block>
+
+    </insertAfter>
+
+<!-- Insert the new, custom BLOCKS before any usage -->
+
+<!-- *** New Blocks -->
+
+    <!-- ATM (looted) -->
+    <insertAfter xpath="/blocks/block[@name='cntATMInsecure']">
+
+        <block name="rbtLootedATM">
+            <property name="Extends" value="cntATMInsecure" param1="Class,LootList"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="CustomIcon" value="cntATMSecure"/>
+            <property name="DescriptionKey" value="rbtLootedATMDesc"/>
+            <property name="FilterTags" value="MC_building"/>
+            <property name="SortOrder1" value="B453"/>
+            <property name="SortOrder2" value="0003"/>
+        </block>
+
+    </insertAfter>
+
+<!-- *** Helpers -->
+
+    <!-- ATM Helper -->
+    <insertAfter xpath="/blocks/block[@name='cntATMInsecure']">
+
+        <!-- Helper that will pick a random ATM for a respawn [REF:  'BLOCKPLACEHOLDERS.XML'] -->
+        <block name="rbtAllATMsRandomHelper">
+            <property name="Extends" value="cntATMInsecure"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="CustomIcon" value="cntATMSecure"/>
+            <property name="CustomIconTint" value="9caf88"/>
+            <property name="DescriptionKey" value="rbtAllATMsRandomHelperDesc"/>
+            <property name="SortOrder1" value="R205"/>
+        </block>
+
+    </insertAfter>
+
+    <!-- Stree Light Helper -->
+    <insertAfter xpath="/blocks/block[@name='streetLightClassic']">
+
+        <!-- Helper that will pick a random street light for a respawn [REF:  'BLOCKPLACEHOLDERS.XML'] -->
+        <block name="rbtAllStreeLightsRandomHelper">
+            <property name="Extends" value="streetLight01"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="CustomIcon" value="streetLight02"/>
+            <property name="CustomIconTint" value="9caf88"/>
+            <property name="DescriptionKey" value="rbtAllStreeLightsRandomHelperDesc"/>
+            <property name="SortOrder1" value="R207"/>
+        </block>
+
+    </insertAfter>
+
+    <!-- Boulder Helper -->
+    <insertAfter xpath="/blocks/block[@name='oreShaleBoulder']">
+
+        <!-- Helper that will pick a random boulder for a respawn [REF:  'BLOCKPLACEHOLDERS.XML'] -->
+        <block name="rbtAllBouldersRandomHelper">
+            <property name="Extends" value="rock01"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="CustomIcon" value="rock04"/>
+            <property name="CustomIconTint" value="9caf88"/>
+            <property name="DescriptionKey" value="rbtAllBouldersRandomHelperDesc"/>
+            <property name="SortOrder1" value="R202"/>
+        </block>
+
+    </insertAfter>
+
+<!-- *** Respawners -->
+
+    <!-- Bird Nest Respawner
+                - Harvest nest -> Grass 'seed'\re-spawn -> new nest
+     -->
+    <insertAfter xpath="/blocks/block[@name='cntBirdnestCorner']">
+
+        <block name="rbtBirdNestRespawner">
+            <property name="Extends" value="rbtTreeGrassRandomMaster"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtBirdNestRespawnerDesc"/>
+            <property name="CustomIcon" value="cntBirdnest"/>
+            <property name="PlantGrowing.Next" value="cntBirdnest"/>
+            <property name="Texture" value="201,306,371,201,306,371"/>
+            <property name="SortOrder1" value="R400"/>
+            <property name="SortOrder2" value="9400"/>
+        </block>
+
+    </insertAfter>
+
+    <!-- ATM Respawner
+                - Harvest ATM -> grass 'seed'\re-spawn -> new, random ATM
+     -->
+    <insertAfter xpath="/blocks/block[@name='cntATMInsecure']">
+
+        <block name="rbtATMRandomRespawner">
+            <property name="Extends" value="rbtTreeGrassRandomMaster"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtATMRandomRespawnerDesc"/>
+            <property name="CustomIcon" value="cntATMSecure"/>
+            <property name="PlantGrowing.Next" value="rbtAllATMsRandomHelper"/>
+            <property name="Texture" value="201,306,371,201,306,371"/>
+            <property name="SortOrder1" value="R505"/>
+            <property name="SortOrder2" value="9505"/>
+        </block>
+
+    </insertAfter>
+
+
+    <!-- Vending machine Respawner
+                - Harvest vending machine -> grass 'seed'\re-spawn -> new, random vending machine
+     -->
+    <insertAfter xpath="/blocks/block[@name='cntVendingMachineSnacksRandomLootHelper']">
+
+        <block name="rbtAllDrinksVendingMachineRandomRespawner">
+            <property name="Extends" value="rbtTreeGrassRandomMaster"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtAllDrinksVendingMachineRandomRespawnerDesc"/>
+            <property name="CustomIcon" value="cntVendingMachine2"/>
+            <property name="PlantGrowing.Next" value="cntVendingMachine2RandomLootHelper"/>
+            <property name="Texture" value="201,306,371,201,306,371"/>
+            <property name="SortOrder1" value="R506"/>
+            <property name="SortOrder2" value="9506"/>
+        </block>
+
+        <block name="rbtAllSnacksVendingMachineRandomRespawner">
+            <property name="Extends" value="rbtTreeGrassRandomMaster"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtAllSnacksVendingMachineRandomRespawnerDesc"/>
+            <property name="CustomIcon" value="cntVendingMachineSnacksFull"/>
+            <property name="PlantGrowing.Next" value="cntVendingMachineSnacksRandomLootHelper"/>
+            <property name="Texture" value="201,306,371,201,306,371"/>
+            <property name="SortOrder1" value="R507"/>
+            <property name="SortOrder2" value="9507"/>
+        </block>
+
+    </insertAfter>
+
+    <!-- Stree Light Respawner
+                - Harvest street lights -> air 'seed'\re-spawn -> new, random street light
+     -->
+    <insertAfter xpath="/blocks/block[@name='cntVendingMachineSnacksRandomLootHelper']">
+
+        <block name="rbtAllStreeLightRandomRespawner">
+            <property name="Extends" value="rbtAirRandomMaster"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtAllStreeLightRandomRespawnerDesc"/>
+            <property name="CustomIcon" value="streetLight01"/>
+            <property name="PlantGrowing.Next" value="rbtAllStreeLightsRandomHelper"/>
+            <property name="SortOrder1" value="R509"/>
+            <property name="SortOrder2" value="9509"/>
+        </block>
+
+    </insertAfter>
+
+    <!-- Transformer Respawner
+                - Harvest transformer -> air 'seed'\re-spawn -> new transformer
+     -->
+    <insertAfter xpath="/blocks/block[@name='utilityInsulator']">
+
+        <block name="rbtUtilityTransformerRespawner">
+            <property name="Extends" value="rbtAirRandomMaster"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtUtilityTransformerRespawnerDesc"/>
+            <property name="CustomIcon" value="utilityTransformer"/>
+            <property name="PlantGrowing.Next" value="utilityTransformer"/>
+            <property name="SortOrder1" value="R514"/>
+            <property name="SortOrder2" value="9514"/>
+        </block>
+
+        <block name="rbtUtilityTransformerHangingRespawner">
+            <property name="Extends" value="rbtAirRandomMaster"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtUtilityTransformerHangingRespawnerDesc"/>
+            <property name="CustomIcon" value="utilityTransformerHanging"/>
+            <property name="PlantGrowing.Next" value="utilityTransformerHanging"/>
+            <property name="SortOrder1" value="R514"/>
+            <property name="SortOrder2" value="9514"/>
+        </block>
+
+    </insertAfter>
+
+    <!-- Boulder Respawner
+                - Harvest boulder -> rock 'seed'\re-spawn -> new boulder
+     -->
+    <insertAfter xpath="/blocks/block[@name='oreShaleBoulder']">
+
+        <block name="rbtAllBoulderRandomRespawner">
+            <property name="Extends" value="rbtBoulderRandomMaster"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtAllBoulderRandomRespawnerDesc"/>
+            <property name="CustomIcon" value="rock01"/>
+            <property name="SortOrder1" value="R401"/>
+            <property name="SortOrder2" value="9401"/>
+        </block>
+
+    </insertAfter>
+
+<!-- ************************
+
+     Here's where we 'hijack' the existing blocks to do our bidding.
+     Remove/comment out below to remove what's not wanted
+
+ ************************ -->
+
+<!-- Tweak the boulders as we'd like
+        - Insert the DowngradeBlock
+ -->
+    <append xpath="//block[@name='resourceRock01']">
+        <property name="DowngradeBlock" value="rbtAllBoulderRandomRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+    </append>
+
+<!-- Tweak the bird nests as we'd like
+        - Insert the DowngradeBlock
+ -->
+    <append xpath="//block[@name='cntBirdnest']">
+        <property name="DowngradeBlock" value="rbtBirdNestRespawner"/>
+    </append>
+
+<!-- Tweak the ATMs as we'd like
+        - Insert the DowngradeBlock
+ -->
+    <append xpath="//block[@name='cntATMInsecure']">
+        <property name="DowngradeBlock" value="rbtATMRandomRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+    </append>
+
+<!-- Tweak the vending machines as we'd like
+        - Insert the DowngradeBlock
+ -->
+    <append xpath="//block[@name='cntVendingMachine2Broken']">
+        <property name="DowngradeBlock" value="rbtAllDrinksVendingMachineRandomRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+    </append>
+
+    <append xpath="//block[starts-with(@name, 'cntVendingMachineSnacks')]">
+        <property name="DowngradeBlock" value="rbtAllSnacksVendingMachineRandomRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+    </append>
+
+<!-- Tweak the street lights as we'd like
+        - Insert the DowngradeBlock
+ -->
+    <append xpath="//block[@name='streetLight01']">
+        <property name="DowngradeBlock" value="rbtAllStreeLightRandomRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+    </append>
+
+<!-- Tweak the transformers as we'd like
+        - Insert the DowngradeBlock
+ -->
+    <append xpath="//block[@name='utilityTransformer']">
+        <property name="DowngradeBlock" value="rbtUtilityTransformerRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+    </append>
+ -->
+    <append xpath="//block[@name='utilityTransformerHanging']">
+        <property name="DowngradeBlock" value="rbtUtilityTransformerHangingRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+    </append>
+
+</blocks>
+
+<!--'spawnVehicleBlock' -> spawner of your choice (placed on TOP side of block) -> 'grows' to an asphault block (grow time should be high '0.0001')
+
+    <append xpath="/blocks">
+
+	    <block name="spawnVehicleBlock">
+		    <property name="CreativeMode" value="Dev"/>
+		    <property name="Extends" value="air"/>
+		    <property name="Class" value="PlantGrowing"/>
+		    <property name="PlantGrowing.Next" value="spawnVehicleNext"/>
+		    <property name="PlantGrowing.GrowOnTop" value="{YOUR SPAWNER HERE}"/>
+		    <property name="PlantGrowing.GrowthRate" value="0.25"/>
+		    <property name="PlantGrowing.FertileLevel" value="0"/>
+		    <property name="PlantGrowing.IsRandom" value="false"/>
+		    <property name="PlantGrowing.LightLevelGrow" value="0"/>
+		    <property name="PlantGrowing.LightLevelStay" value="0"/>
+		    <property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+		    <drop event="Destroy" count="0"/>
+	    </block>
+	    <block name="spawnVehicleNext">
+		    <property name="CreativeMode" value="None"/>
+		    <property name="Extends" value="spawnVehicleBlock"/>
+		    <property name="PlantGrowing.Next" value="spawnVehicleEnd"/>
+		    <property name="PlantGrowing.IsGrowOnTopEnabled" value="false"/>
+		    <property name="PlantGrowing.IsRandom" value="false"/>
+		    <property name="PlantGrowing.GrowthRate" value="0.25"/>
+	    </block>
+	    <block name="spawnVehicleEnd">
+		    <property name="CreativeMode" value="None"/>
+		    <property name="Extends" value="spawnVehicleBlock"/>
+		    <property name="MultiBlockDim" value="1,3,1"/>
+		    <property name="PlantGrowing.Next" value="terrAsphalt"/>
+		    <property name="PlantGrowing.GrowthRate" value="0.0001"/>
+		    <property name="PlantGrowing.IsRandom" value="false"/>
+		    <property name="PlantGrowing.IsGrowOnTopEnabled" value="false"/>
+	    </block>
+
+    </append>
+
+-->
