@@ -8,8 +8,8 @@ rbtAllTreesRandomHelperDesc,blocks,block,,,"Will randomly select a biome appropr
 rbtAllCactiRandomHelper,blocks,Block,,,"Cacti randomizer for respawn"
 rbtAllCactiRandomHelperDesc,blocks,block,,,"Will randomly select biome appropriate flora for a respawn event."
 
-rbtAllRockSlabsRandomHelper,blocks,Block,,,"Boulder randomizer for respawn"
-rbtAllRockSlabsRandomHelperDesc,blocks,block,,,"Will randomly select a boulder for a respawn event."
+rbtAllBouldersRandomHelper,blocks,Block,,,"Boulder randomizer for respawn"
+rbtAllBouldersRandomHelperDesc,blocks,block,,,"Will randomly select a boulder for a respawn event."
 
 rbtTreeStumpRandomRespawner,blocks,Block,,,"Random tree respawner"
 rbtTreeStumpRandomRespawnerDesc,blocks,block,,,"Will respawn a random, biome appropiate tree after a set time."
@@ -26,8 +26,8 @@ rbtBirdNestRespawnerDesc,blocks,Block,,,"Will spawn a new bird's nest after a se
 rbtCactiRandomRespawner,blocks,Block,,,"Random Desert flora respawner"
 rbtCactiRandomRespawnerDesc,blocks,block,,,"Will respawn random, biome appropriate flora after a set time."
 
-rbtBoulderRandomRespawner,blocks,Block,,,"Random boulder respawner"
-rbtBoulderRandomRespawnerDesc,blocks,block,,,"Will respawn a random boulder after a set time."
+rbtAllBoulderRandomRespawner,blocks,Block,,,"Random boulder respawner"
+rbtAllBoulderRandomRespawnerDesc,blocks,block,,,"Will respawn a random boulder after a set time."
 
 rbtChrysanthemumRespawner,blocks,Block,,,"Chrysanthemum respawner"
 rbtChrysanthemumRespawnerDesc,blocks,block,,,"Will respawn a chrysanthemum plant after a set time."
@@ -111,7 +111,7 @@ rbtSemiTruckModularFrontRandomRespawner,blocks,Block,,,"Modular, semi-truck resp
 rbtSemiTruckModularFrontRandomRespawnerDesc,blocks,block,,,"Will respawn a random modular, semi-truck after a set time."
 
 rbtPoliceCarRandomRespawner,blocks,Block,,,"Police car respawner"
-rrbtPoliceCarRandomRespawnerDesc,blocks,block,,,"Will respawn a random police car after a set time."
+rbtPoliceCarRandomRespawnerDesc,blocks,block,,,"Will respawn a random police car after a set time."
 
 rbtFireTruckRandomRespawner,blocks,Block,,,"Fire truck respawner"
 rbtFireTruckRandomRespawnerDesc,blocks,block,,,"Will respawn a random fire truck after a set time."
@@ -178,4 +178,10 @@ rbtUtilityTransformerRespawnerDesc,blocks,block,,,"Will respawn a utility transf
 
 rbtUtilityTransformerHangingRespawner,blocks,Block,,,"Hanging utility transformer respawner"
 rbtUtilityTransformerHangingRespawnerDesc,blocks,block,,,"Will respawn a hanging utility transformer after a set time."
+
+rbtLootedATM,blocks,Block,,,"ATM (looted)"
+rbtLootedATMDesc,blocks,block,,,"An ATM, empty from looting."
+
+rbtLootedPoliceCar,blocks,Block,,,"Police cruiser (looted)"
+rbtLootedPoliceCarDesc,blocks,block,,,"A police cruiser, empty from looting."
 

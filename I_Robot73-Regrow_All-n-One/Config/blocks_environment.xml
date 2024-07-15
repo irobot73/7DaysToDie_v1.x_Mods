@@ -87,7 +87,7 @@
             <property name="OnlySimpleRotations" value="true"/>
             <property name="PlantGrowing.GrowthRate" value="0.2"/>
             <property name="PlantGrowing.FertileLevel" value="0"/>
-            <property name="PlantGrowing.Next" value="rbtAllRockSlabsRandomHelper"/>
+            <property name="PlantGrowing.Next" value="rbtAllBouldersRandomHelper"/>
             <property name="CanPlayersSpawnOn" value="false"/>
             <property name="CanMobsSpawnOn" value="false"/>
             <property name="MaxDamage" value="100"/>
@@ -101,6 +101,23 @@
 
 <!-- Insert the new, custom BLOCKS before any usage -->
 
+<!-- *** New Blocks -->
+
+    <!-- ATM (looted) -->
+    <insertAfter xpath="/blocks/block[@name='cntATMInsecure']">
+
+        <block name="rbtLootedATM">
+            <property name="Extends" value="cntATMInsecure" param1="Class,LootList"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="CustomIcon" value="cntATMSecure"/>
+            <property name="DescriptionKey" value="rbtLootedATMDesc"/>
+            <property name="FilterTags" value="MC_building"/>
+            <property name="SortOrder1" value="B453"/>
+            <property name="SortOrder2" value="0003"/>
+        </block>
+
+    </insertAfter>
+
 <!-- *** Helpers -->
 
     <!-- ATM Helper -->
@@ -109,7 +126,7 @@
         <!-- Helper that will pick a random ATM for a respawn [REF:  'BLOCKPLACEHOLDERS.XML'] -->
         <block name="rbtAllATMsRandomHelper">
             <property name="Extends" value="cntATMInsecure"/>
-            <property name="CreativeMode" value="Player"/>
+            <property name="CreativeMode" value="Dev"/>
             <property name="CustomIcon" value="cntATMSecure"/>
             <property name="CustomIconTint" value="9caf88"/>
             <property name="DescriptionKey" value="rbtAllATMsRandomHelperDesc"/>
@@ -124,7 +141,7 @@
         <!-- Helper that will pick a random street light for a respawn [REF:  'BLOCKPLACEHOLDERS.XML'] -->
         <block name="rbtAllStreeLightsRandomHelper">
             <property name="Extends" value="streetLight01"/>
-            <property name="CreativeMode" value="Player"/>
+            <property name="CreativeMode" value="Dev"/>
             <property name="CustomIcon" value="streetLight02"/>
             <property name="CustomIconTint" value="9caf88"/>
             <property name="DescriptionKey" value="rbtAllStreeLightsRandomHelperDesc"/>
@@ -137,12 +154,12 @@
     <insertAfter xpath="/blocks/block[@name='oreShaleBoulder']">
 
         <!-- Helper that will pick a random boulder for a respawn [REF:  'BLOCKPLACEHOLDERS.XML'] -->
-        <block name="rbtAllRockSlabsRandomHelper">
+        <block name="rbtAllBouldersRandomHelper">
             <property name="Extends" value="rock01"/>
-            <property name="CreativeMode" value="Player"/>
+            <property name="CreativeMode" value="Dev"/>
             <property name="CustomIcon" value="rock04"/>
             <property name="CustomIconTint" value="9caf88"/>
-            <property name="DescriptionKey" value="rbtAllRockSlabsRandomHelperDesc"/>
+            <property name="DescriptionKey" value="rbtAllBouldersRandomHelperDesc"/>
             <property name="SortOrder1" value="R202"/>
         </block>
 
@@ -265,10 +282,10 @@
      -->
     <insertAfter xpath="/blocks/block[@name='oreShaleBoulder']">
 
-        <block name="rbtBoulderRandomRespawner">
+        <block name="rbtAllBoulderRandomRespawner">
             <property name="Extends" value="rbtBoulderRandomMaster"/>
             <property name="CreativeMode" value="Dev"/>
-            <property name="DescriptionKey" value="rbtBoulderRandomRespawnerDesc"/>
+            <property name="DescriptionKey" value="rbtAllBoulderRandomRespawnerDesc"/>
             <property name="CustomIcon" value="rock01"/>
             <property name="SortOrder1" value="R401"/>
             <property name="SortOrder2" value="9401"/>
@@ -287,7 +304,7 @@
         - Insert the DowngradeBlock
  -->
     <append xpath="//block[@name='resourceRock01']">
-        <property name="DowngradeBlock" value="rbtBoulderRandomRespawner"/>
+        <property name="DowngradeBlock" value="rbtAllBoulderRandomRespawner"/>
         <property name="PassThroughDamage" value="false"/>
     </append>
 

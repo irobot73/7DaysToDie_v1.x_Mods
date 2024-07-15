@@ -486,16 +486,11 @@
 
 		<!-- *** POLICE_CAR -->
 		<placeholder name="rbtAllPoliceCarRandomHelper">
-			<block name="cntPoliceCar01" prob="0.8"/>
-			<block name="cntPoliceCar01AlarmUnlocked" prob="0.05"/>
-			<block name="cntPoliceCar01" prob="1.0"/>
-			<block name="cntPoliceCar01AlarmUnlocked" prob="0.05"/>
-            <!-- This one will call in the zeds -->
-			<block name="cntPoliceCar01PickedLockBonus" prob="0.01"/>
-			<block name="cntPoliceCar01" prob="0.6"/>
-			<block name="cntPoliceCar01AlarmUnlocked" prob="0.05"/>
-			<block name="cntPoliceCar01" prob="0.4"/>
-			<block name="cntPoliceCar01AlarmUnlocked" prob="0.05"/>
+			<block name="cntPoliceCar01" prob="0.5"/>
+			<block name="cntPoliceCar01AlarmUnlocked" prob="0.1"/>
+            <!-- This one will call in the zeds
+			<block name="cntPoliceCar01PickedLockBonus" prob="0.01"/> -->
+			<block name="rbtLootedPoliceCar" prob="0.25"/>
 		</placeholder>
 
         <!-- FIRE_TRUCK (uses existing HELPER -->

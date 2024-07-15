@@ -20,8 +20,9 @@
 
 <!-- *** ATMS -->
 		<placeholder name="rbtAllATMsRandomHelper">
-			<block name="cntATMSecure" prob=".4"/>
-			<block name="cntATMInsecure" prob=".6"/>
+			<block name="cntATMSecure" prob=".6"/>
+			<block name="cntATMInsecure" prob=".1"/>
+			<block name="rbtLootedATM" prob=".4"/>
 		</placeholder>
 
 <!-- *** STREET_LIGHTS -->
@@ -44,7 +45,7 @@
 		    <block name="rock07" randomrotation="true" prob="0.2"/>
 	    </placeholder>
 
-	    <placeholder name="rbtAllRockSlabsRandomHelper">
+	    <placeholder name="rbtAllBouldersRandomHelper">
 		    <block name="resourceRock01" randomrotation="true" prob="0.35"/>
 		    <block name="resourceRock02" randomrotation="true" prob="0.25"/>
 		    <block name="resourceRock03" randomrotation="true" prob="0.3"/>
