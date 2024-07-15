@@ -11,7 +11,7 @@ Custom, SERVER-side mods for any 7 Days To Die v1.x server
     * Nests
     * ATMs
     * Vending machines
-    * Stree lights (on poles)
+    * Street lights (on poles)
     * Utility transformers (on poles)
 
 [I_Robot73-Regrow_Boulders](https://github.com/irobot73/7DaysToDie_v1.x_Mods/tree/main/I_Robot73-Regrow_Boulders)
