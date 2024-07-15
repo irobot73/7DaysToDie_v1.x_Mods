@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-
-<blocks>
-
-<include filename="./blocks_environment.xml" />
-<include filename="./blocks_flora.xml" />
-<include filename="./blocks_vehicles.xml" />
-
-</blocks>
