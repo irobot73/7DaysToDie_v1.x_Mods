@@ -11,22 +11,22 @@ rbtAllCactiRandomHelperDesc,blocks,block,,,"Will randomly select biome appropria
 rbtAllBouldersRandomHelper,blocks,Block,,,"Boulder randomizer for respawn"
 rbtAllBouldersRandomHelperDesc,blocks,block,,,"Will randomly select a boulder for a respawn event."
 
-rbtTreeStumpRandomRespawner,blocks,Block,,,"Random tree respawner"
+rbtTreeStumpRandomRespawner,blocks,Block,,,"Tree respawner"
 rbtTreeStumpRandomRespawnerDesc,blocks,block,,,"Will respawn a random, biome appropiate tree after a set time."
 
-rbtTreeStumpWinterRandomRespawner,blocks,Block,,,"Random Winter tree respawner"
+rbtTreeStumpWinterRandomRespawner,blocks,Block,,,"Winter tree respawner"
 rbtTreeStumpWinterRandomRespawnerDesc,blocks,block,,,"Lower harvest results.  Will respawn a random, biome appropiate tree after a set time."
 
-rbtTreeStumpBurntRandomRespawner,blocks,Block,,,"Random Burnt tree respawner"
+rbtTreeStumpBurntRandomRespawner,blocks,Block,,,"Burnt tree respawner"
 rbtTreeStumpBurntRandomRespawnerDesc,blocks,block,,,"Lowest harvest results.  Will respawn a random, biome appropiate tree after a set time."
 
 rbtBirdNestRespawner,blocks,Block,,,"Bird nest respawner"
 rbtBirdNestRespawnerDesc,blocks,Block,,,"Will spawn a new bird's nest after a set time."
 
-rbtCactiRandomRespawner,blocks,Block,,,"Random Desert flora respawner"
+rbtCactiRandomRespawner,blocks,Block,,,"Desert flora respawner"
 rbtCactiRandomRespawnerDesc,blocks,block,,,"Will respawn random, biome appropriate flora after a set time."
 
-rbtAllBoulderRandomRespawner,blocks,Block,,,"Random boulder respawner"
+rbtAllBoulderRandomRespawner,blocks,Block,,,"Boulder respawner"
 rbtAllBoulderRandomRespawnerDesc,blocks,block,,,"Will respawn a random boulder after a set time."
 
 rbtChrysanthemumRespawner,blocks,Block,,,"Chrysanthemum respawner"
@@ -35,7 +35,7 @@ rbtChrysanthemumRespawnerDesc,blocks,block,,,"Will respawn a chrysanthemum plant
 rbtCottonRespawner,blocks,Block,,,"Cotton respawner"
 rbtCottonRespawnerDesc,blocks,block,,,"Will respawn a cotton plant after a set time."
 
-rbtGoldenrodRespawnerRespawner,blocks,Block,,,"RGoldenrod respawner"
+rbtGoldenrodRespawner,blocks,Block,,,"Goldenrod respawner"
 rbtGoldenrodRespawnerDesc,blocks,block,,,"Will respawn a goldenrod plant after a set time."
 
 rbtAllVehiclesRandomHelper,blocks,Block,,,"Vehicle randomizer for respawn"
@@ -80,7 +80,7 @@ rbtAllForkLiftsRandomHelperDesc,blocks,block,,,"Will randomly select a forklift 
 rbtAllCarRandomRespawner,blocks,Block,,,"Any vehicle respawner (custom list)"
 rbtAllCarRandomRespawnerDesc,blocks,block,,,"Will respawn, from a custom list, a random, in style and condition, vehicle."
 
-rbtVehicleRandomRespawner,blocks,Block,,,"ssny vehicle respawner (in-game list)"
+rbtVehicleRandomRespawner,blocks,Block,,,"Any vehicle respawner (in-game list)"
 rbtVehicleRandomRespawnerDesc,blocks,block,,,"Will respawn, from an in-game list, a random, in style and condition, vehicle."
 
 rbtCar3WideRandomRespawner,blocks,Block,,,"Sedan '3-wide' respawner"
@@ -116,11 +116,11 @@ rbtPoliceCarRandomRespawnerDesc,blocks,block,,,"Will respawn a random police car
 rbtFireTruckRandomRespawner,blocks,Block,,,"Fire truck respawner"
 rbtFireTruckRandomRespawnerDesc,blocks,block,,,"Will respawn a random fire truck after a set time."
 
-rbtCrushedCar01RandomRespawner,blocks,Block,,,"Crushed car stack respawner (in-game list)"
-rbtCrushedCar01RandomRespawnerDesc,blocks,block,,,"Will respawn, from an in-game list, a random crushed car stack after a set time."
+rbtCrushedCar01RandomRespawner,blocks,Block,,,"Crushed car stack (01) respawner (in-game list)"
+rbtCrushedCar01RandomRespawnerDesc,blocks,block,,,"Will respawn, from an in-game list, a random crushed car stack (01) after a set time."
 
-rbtCrushedCar02RandomRespawner,blocks,Block,,,"Crushed car stack respawner (in-game list)"
-rbtCrushedCar02RandomRespawnerDesc,blocks,block,,,"Will respawn, from an in-game list, a random crushed car stack after a set time."
+rbtCrushedCar02RandomRespawner,blocks,Block,,,"Crushed car stack (02) respawner (in-game list)"
+rbtCrushedCar02RandomRespawnerDesc,blocks,block,,,"Will respawn, from an in-game list, a random crushed car stack (02) after a set time."
 
 rbtAllCrushedCarRandomRespawner,blocks,Block,,,"Crushed car stack respawner (custom list)"
 rbtAllCrushedCarRandomRespawnerDesc,blocks,block,,,"Will respawn, from a custom list, a random crushed car stack after a set time."
@@ -159,7 +159,7 @@ rbtAllATMsRandomHelper,blocks,Block,,,"ATM randomizer for respawn"
 rbtAllATMsRandomHelperDesc,blocks,block,,,"Will randomly select an ATM for a respawn event."
 
 rbtATMRandomRespawner,blocks,Block,,,"ATM respawner"
-rbtATMRandomRespawnerDesc,blocks,block,,,"Will respawn an ATM after a set time."
+rbtATMRandomRespawnerDesc,blocks,block,,,"Will respawn a random ATM after a set time."
 
 rbtAllDrinksVendingMachineRandomRespawner,blocks,Block,,,"Drink vending machine respawner"
 rbtAllDrinksVendingMachineRandomRespawnerDesc,blocks,block,,,"Will respawn a random drink vending after a set time."
@@ -171,7 +171,7 @@ rbtAllStreeLightsRandomHelper,blocks,Block,,,"Street light randomizer for respaw
 rbtAllStreeLightsRandomHelperDesc,blocks,block,,,"Will randomly select a street light for a respawn event."
 
 rbtAllStreeLightRandomRespawner,blocks,Block,,,"Street light respawner"
-rbtAllStreeLightRandomRespawnerDesc,blocks,block,,,"Will respawn a random a street light after a set time."
+rbtAllStreeLightRandomRespawnerDesc,blocks,block,,,"Will respawn a random street light after a set time."
 
 rbtUtilityTransformerRespawner,blocks,Block,,,"Utility transformer respawner"
 rbtUtilityTransformerRespawnerDesc,blocks,block,,,"Will respawn a utility transformer after a set time."
