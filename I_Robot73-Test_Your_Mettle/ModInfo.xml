@@ -4,7 +4,7 @@
 	<DisplayName value="Test Your Mettle (Robot Edition)" />
 	<Description value="Skips the 'Basic Survival' challanges, if you want." />
 	<Author value="I_Robot73, StormyG7"/>
-	<Version value="1.0.2"/>
+	<Version value="1.0.3"/>
 	<Website value="https://discord.gg/DEU5wmMvSn/"/>
 	<SkipWithAntiCheat value="false"/>
 </xml>
