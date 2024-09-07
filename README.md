@@ -1,6 +1,9 @@
 # 7 Days To Die v1.x Mods
 Custom, SERVER-side mods for any 7 Days To Die v1.x server
 
+[I_Robot73-Dirt_Fix](https://github.com/irobot73/7DaysToDie_v1.x_Mods/tree/main/I_Robot73-Dirt_Fix)
+* Mitigate players from ganking existing game mechanics by being able to harvest dirt/topsoil blocks for more clay (obtaining 22) then needed to craft (16).
+
 [I_Robot73-Regrow_All-n-One](https://github.com/irobot73/7DaysToDie_v1.x_Mods/tree/main/I_Robot73-Regrow_All-n-One)
 * Regrows, after a time:
     * Trees
