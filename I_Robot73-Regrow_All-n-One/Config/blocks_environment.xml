@@ -103,12 +103,71 @@
 
 <!-- *** New Blocks -->
 
+    <!-- Post Mailbox (looted) -->
+    <insertAfter xpath="/blocks/block[@name='cntPostMailbox']">
+
+        <block name="rbtEmptyPostMailbox">
+            <property name="Extends" value="cntPostMailbox"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="LootList" value="mailboxEmpty"/>
+            <property name="CustomIcon" value="cntPostMailbox"/>
+            <property name="DescriptionKey" value="rbtEmptyPostMailboxDesc"/>
+            <property name="FilterTags" value="MC_building,SC_commercial,MC_outdoor,SC_decor"/>
+            <property name="SortOrder1" value="B463"/>
+            <property name="SortOrder2" value="0004"/>
+        </block>
+
+    </insertAfter>
+
+    <!-- News Dispensers (looted) -->
+    <insertAfter xpath="/blocks/block[@name='cntNewspaperDispenserStandYellow']">
+
+        <block name="rbtEmptyNewsDispenseFreeGreen">
+            <property name="Extends" value="cntNewsDispenseFreeGreen"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="LootList" value="mailboxEmpty"/>
+            <property name="CustomIcon" value="cntNewsDispenseFreeGreen"/>
+            <property name="DescriptionKey" value="rbtEmptyNewsDispenseFreeGreenDesc"/>
+            <property name="SortOrder1" value="B463"/>
+            <property name="SortOrder2" value="0006"/>
+        </block>
+        <block name="rbtEmptyNewsDispenseFreeOrange">
+            <property name="Extends" value="cntNewsDispenseFreeOrange"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="LootList" value="mailboxEmpty"/>
+            <property name="CustomIcon" value="cntNewsDispenseFreeOrange"/>
+            <property name="DescriptionKey" value="rbtEmptyNewsDispenseFreeOrangeDesc"/>
+            <property name="SortOrder1" value="B463"/>
+            <property name="SortOrder2" value="0007"/>
+        </block>
+        <block name="rbtEmptyNewspaperDispenserStandBlue">
+            <property name="Extends" value="cntNewspaperDispenserStandBlue"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="LootList" value="mailboxEmpty"/>
+            <property name="CustomIcon" value="cntNewspaperDispenserStandBlue"/>
+            <property name="DescriptionKey" value="rbtEmptyNewspaperDispenserStandBlueDesc"/>
+            <property name="SortOrder1" value="B463"/>
+            <property name="SortOrder2" value="0008"/>
+        </block>
+        <block name="rbtEmptyNewspaperDispenserStandYellow">
+            <property name="Extends" value="cntNewspaperDispenserStandYellow"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="LootList" value="mailboxEmpty"/>
+            <property name="CustomIcon" value="cntNewspaperDispenserStandYellow"/>
+            <property name="DescriptionKey" value="rbtEmptyNewspaperDispenserStandYellowDesc"/>
+            <property name="SortOrder1" value="B463"/>
+            <property name="SortOrder2" value="0009"/>
+        </block>
+
+    </insertAfter>
+
     <!-- ATM (looted) -->
     <insertAfter xpath="/blocks/block[@name='cntATMInsecure']">
 
         <block name="rbtLootedATM">
-            <property name="Extends" value="cntATMInsecure" param1="Class,LootList"/>
+            <property name="Extends" value="cntATMInsecure"/>
             <property name="CreativeMode" value="Dev"/>
+            <property name="LootList" value="atmEmpty"/>
             <property name="CustomIcon" value="cntATMSecure"/>
             <property name="DescriptionKey" value="rbtLootedATMDesc"/>
             <property name="FilterTags" value="MC_building"/>
@@ -119,6 +178,38 @@
     </insertAfter>
 
 <!-- *** Helpers -->
+
+    <!-- Post Mailbox Helper -->
+    <insertAfter xpath="/blocks/block[@name='rbtEmptyPostMailbox']">
+
+        <!-- Helper that will pick a random post mailbox for a respawn [REF:  'BLOCKPLACEHOLDERS.XML'] -->
+        <block name="rbtAllPostMailboxesRandomHelper">
+            <property name="Extends" value="cntPostMailbox"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="CustomIcon" value="cntPostMailbox"/>
+            <property name="CustomIconTint" value="9caf88"/>
+            <property name="ItemTypeIcon" value="other"/>
+            <property name="DescriptionKey" value="rbtAllPostMailboxesRandomHelperDesc"/>
+            <property name="SortOrder1" value="R215"/>
+        </block>
+
+    </insertAfter>
+
+    <!-- Newspaper Dispenser Helper -->
+    <insertAfter xpath="/blocks/block[@name='cntNewspaperDispenserStandYellow']">
+
+        <!-- Helper that will pick a random news dispenser for a respawn [REF:  'BLOCKPLACEHOLDERS.XML'] -->
+        <block name="rbtAllNewsDispensersRandomHelper">
+            <property name="Extends" value="cntNewsDispenseFreeGreen"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="CustomIcon" value="cntNewsDispenseFreeGreen"/>
+            <property name="CustomIconTint" value="9caf88"/>
+            <property name="ItemTypeIcon" value="other"/>
+            <property name="DescriptionKey" value="rbtAllNewsDispensersRandomHelperDesc"/>
+            <property name="SortOrder1" value="R220"/>
+        </block>
+
+    </insertAfter>
 
     <!-- ATM Helper -->
     <insertAfter xpath="/blocks/block[@name='cntATMInsecure']">
@@ -184,6 +275,42 @@
             <property name="Texture" value="201,306,371,201,306,371"/>
             <property name="SortOrder1" value="R400"/>
             <property name="SortOrder2" value="9400"/>
+        </block>
+
+    </insertAfter>
+
+    <!-- Post Mailbox Respawner
+                - Harvest post mailbox -> grass 'seed'\re-spawn -> new, random post mailbox
+     -->
+    <insertAfter xpath="/blocks/block[@name='rbtAllPostMailboxesRandomHelper']">
+
+        <block name="rbtPostMailboxRandomRespawner">
+            <property name="Extends" value="rbtTreeGrassRandomMaster"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtPostMailboxRandomRespawnerDesc"/>
+            <property name="CustomIcon" value="cntATMSecure"/>
+            <property name="PlantGrowing.Next" value="rbtAllPostMailboxesRandomHelper"/>
+            <property name="Texture" value="201,306,371,201,306,371"/>
+            <property name="SortOrder1" value="R515"/>
+            <property name="SortOrder2" value="9515"/>
+        </block>
+
+    </insertAfter>
+
+    <!-- News Dispenser Respawner
+                - Harvest news dispenser -> grass 'seed'\re-spawn -> new, random news dispenser
+     -->
+    <insertAfter xpath="/blocks/block[@name='rbtAllNewsDispensersRandomHelper']">
+
+        <block name="rbtNewsDispenserRandomRespawner">
+            <property name="Extends" value="rbtTreeGrassRandomMaster"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtNewsDispenserRandomRespawnerDesc"/>
+            <property name="CustomIcon" value="cntNewsDispenseFreeGreen"/>
+            <property name="PlantGrowing.Next" value="rbtAllNewsDispensersRandomHelper"/>
+            <property name="Texture" value="201,306,371,201,306,371"/>
+            <property name="SortOrder1" value="R520"/>
+            <property name="SortOrder2" value="9520"/>
         </block>
 
     </insertAfter>
@@ -316,6 +443,23 @@
  -->
     <append xpath="//block[@name='cntBirdnest']">
         <property name="DowngradeBlock" value="rbtBirdNestRespawner"/>
+    </append>
+
+<!-- Tweak the Post Mailbox as we'd like
+        - Insert the DowngradeBlock
+ -->
+    <append xpath="//block[@name='cntPostMailbox']">
+        <property name="DowngradeBlock" value="rbtPostMailboxRandomRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+    </append>
+
+<!-- Tweak the News Dispensers as we'd like
+        - Override the DowngradeBlock
+ -->
+    <setattribute xpath="//block[starts-with(@name, 'cntNewsDispenseFree') or starts-with(@name, 'cntNewspaperDispenserStand')]/property[@name='Extends']" name="param1">DowngradeBlock</setattribute>
+    <append xpath="//block[starts-with(@name, 'cntNewsDispenseFree') or starts-with(@name, 'cntNewspaperDispenserStand')]">
+        <property name="DowngradeBlock" value="rbtNewsDispenserRandomRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
     </append>
 
 <!-- Tweak the ATMs as we'd like

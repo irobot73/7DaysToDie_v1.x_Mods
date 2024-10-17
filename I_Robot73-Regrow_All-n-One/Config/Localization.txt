@@ -179,9 +179,33 @@ rbtUtilityTransformerRespawnerDesc,blocks,block,,,"Will respawn a utility transf
 rbtUtilityTransformerHangingRespawner,blocks,Block,,,"Hanging utility transformer respawner"
 rbtUtilityTransformerHangingRespawnerDesc,blocks,block,,,"Will respawn a hanging utility transformer after a set time."
 
-rbtLootedATM,blocks,Block,,,"ATM (looted)"
+rbtEmptyPostMailbox,blocks,Block,,,Mail Drop Box
+rbtEmptyPostMailboxDesc,blocks,Block,,,"An old postal drop-box, empty from looting."
+
+rbtAllPostMailboxesRandomHelper,blocks,Block,,,"Post mailbox randomizer for respawn"
+rbtAllPostMailboxesRandomHelperDesc,blocks,block,,,"Will randomly select a post mailbox for a respawn event."
+
+rbtPostMailboxRandomRespawner,blocks,Block,,,"Post mailbox machine respawner"
+rbtPostMailboxRandomRespawnerDesc,blocks,block,,,"Will respawn a random post mailbox after a set time."
+
+rbtEmptyNewsDispenseFreeGreen,blocks,Block,,,Free Newspaper Dispenser
+rbtEmptyNewsDispenseFreeGreenDesc,blocks,Block,,,"An old free newspaper dispenser, empty from looting."
+rbtEmptyNewsDispenseFreeOrange,blocks,Block,,,Free Newspaper Dispenser
+rbtEmptyNewsDispenseFreeOrangeDesc,blocks,Block,,,"An old free newspaper dispenser, empty from looting."
+rbtEmptyNewspaperDispenserStandBlue,blocks,Block,,,Newspaper Dispenser
+rbtEmptyNewspaperDispenserStandBlueDesc,blocks,Block,,,"An old newspaper dispenser, empty from looting."
+rbtEmptyNewspaperDispenserStandYellow,blocks,Block,,,Newspaper Dispenser
+rbtEmptyNewspaperDispenserStandYellowDesc,blocks,Block,,,"An old newspaper dispenser, empty from looting."
+
+rbtAllNewsDispensersRandomHelper,blocks,Block,,,"News dispenser randomizer for respawn"
+rbtAllNewsDispensersRandomHelperDesc,blocks,block,,,"Will randomly select a news dispenser for a respawn event."
+
+rbtNewsDispenserRandomRespawner,blocks,Block,,,"News dispenser respawner"
+rbtNewsDispenserRandomRespawnerDesc,blocks,block,,,"Will respawn a random news dispenser after a set time."
+
+rbtLootedATM,blocks,Block,,,"ATM"
 rbtLootedATMDesc,blocks,block,,,"An ATM, empty from looting."
 
-rbtLootedPoliceCar,blocks,Block,,,"Police cruiser (looted)"
+rbtLootedPoliceCar,blocks,Block,,,"Police cruiser"
 rbtLootedPoliceCarDesc,blocks,block,,,"A police cruiser, empty from looting."
 
