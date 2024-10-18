@@ -38,6 +38,12 @@ rbtCottonRespawnerDesc,blocks,block,,,"Will respawn a cotton plant after a set t
 rbtGoldenrodRespawner,blocks,Block,,,"Goldenrod respawner"
 rbtGoldenrodRespawnerDesc,blocks,block,,,"Will respawn a goldenrod plant after a set time."
 
+rbtTreeDeadPineLeafRespawner,blocks,Block,,,"Dead pine leaf respawner"
+rbtTreeDeadPineLeafRespawnerDesc,blocks,block,,,"Will respawn a leafless shrub, commonly found in the Forest biome, after a set time."
+
+rbtPlantShrubRespawner,blocks,Block,,,"Shrub respawner"
+rbtPlantShrubRespawnerDesc,blocks,block,,,"Will respawn a leafy shrub, commonly found in the Forest biome, after a set time."
+
 rbtAllVehiclesRandomHelper,blocks,Block,,,"Vehicle randomizer for respawn"
 rbtAllVehiclesRandomHelperDesc,blocks,block,,,"Will randomly select a vehicle for a respawn event."
 
